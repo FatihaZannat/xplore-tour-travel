@@ -2,8 +2,7 @@
   4. General
 ----------------------------------------------------------------*/
 // google fonts
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
 @for $i from 1 through 70 {
   .cs_mb_#{$i} {
@@ -86,7 +85,6 @@
 //   }
 // }
 
-
 .cs_normal {
   font-weight: 400;
 }
@@ -102,13 +100,12 @@
 .cs_bold {
   font-weight: 700;
 }
-.cs_secondary_font{
+.cs_secondary_font {
   font-family: var(--secondary-font);
 }
-.cs_italic{
+.cs_italic {
   font-style: italic;
 }
-
 
 .cs_radius_10 {
   border-radius: 10px;
@@ -119,9 +116,6 @@
 .cs_radius_50 {
   border-radius: 50px;
 }
-
-
-
 
 .cs_mp_0 {
   list-style: none;
@@ -218,9 +212,10 @@ hr {
   align-items: center;
   justify-content: center;
 }
-.cs_heading_bg{
+.cs_heading_bg {
   background-color: rgb(169, 169, 225);
 }
+
 .cs_primary_color {
   color: var(--primary);
 }
@@ -229,9 +224,9 @@ hr {
   color: var(--secondary);
 }
 
-
-
-
+.cs_white_color {
+  color: var(--white);
+}
 
 .cs_primary_bg {
   background-color: var(--primary);
@@ -241,28 +236,29 @@ hr {
   background-color: var(--secondary);
 }
 
-
-
 // --------------------------------------
 
 .cs_btn.cs_style_1 {
-  border: 1px solid var(--secondary);
+  border: 1px solid var(--white);
   border-radius: 50px;
   padding: 8px 32px;
   outline: none;
-  color: var(--secondary);
+  color: var(--white);
   background-color: transparent;
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  svg {
+    margin-left: 10px;
+  }
   @media (max-width: 991px) {
     padding: 12px 20px;
   }
-  // &:hover {
-  //   color: var();
-  //   background-color: var(--primary);
-  //   border-color: var(--primary);
-  // }
+  &:hover {
+    color: var(--primary);
+    background-color: var(--white);
+    border-color: var(--white);
+  }
   &.cs_type_1 {
     border: none;
     color: var(--secondary);
@@ -272,7 +268,6 @@ hr {
       background-color: transparent;
     }
   }
-  
 }
 
 .cs_text_btn {
@@ -281,7 +276,7 @@ hr {
   position: relative;
   padding-bottom: 2px;
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     height: 2px;
     width: 100%;
@@ -439,7 +434,7 @@ hr {
 .cs_list.cs_style_1 {
   position: relative;
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 4px;
     top: 10px;
@@ -456,7 +451,7 @@ hr {
     padding-left: 40px;
     z-index: 1;
     &::before {
-      content: '';
+      content: "";
       height: 10px;
       width: 10px;
       border-radius: 50%;
@@ -493,7 +488,7 @@ hr {
   width: 100%;
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     height: 100%;
     width: 50%;
@@ -541,8 +536,7 @@ hr {
     color: rgba(255, 255, 255, 0.7);
   }
 }
-.cs_heading_color{
-  
+.cs_heading_color {
 }
 .cs_hover_layer,
 .cs_hover_layer_1,
@@ -567,7 +561,7 @@ hr {
   transform: translate(-50%, -50%);
   &:before,
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     left: 50%;
     top: 50%;
