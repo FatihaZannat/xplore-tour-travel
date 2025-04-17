@@ -35,4 +35,17 @@
     .cs_hero_title{
         text-align: center;
     }
+    .cs_hero_footer{
+        .cs_hero_footer_left{
+            max-width: 452px;
+        }
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            text-align: center;
+            .cs_hero_footer_left{
+                padding-bottom: 25px;
+            }
+            
+        }
+    }
 }
