@@ -46,7 +46,6 @@
               $(this).css({
                 'background-image': 'url(' + src + ')',
               });
-              $(this).css('background-color', 'red');
             });
           }
 

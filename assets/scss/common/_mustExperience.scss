@@ -1,0 +1,25 @@
+.cs_must_experience_card{
+
+    .cs_card{
+    position: relative;
+    
+
+    .cs_icon{
+        position: absolute;
+        background: var(--Gradient-1, linear-gradient(94deg, rgba(255, 255, 255, 0.40) 33.35%, rgba(255, 255, 255, 0.10) 91.75%));
+        top: 16px;
+        right: 36px;
+    }
+    .cs_card_footer{
+        position: absolute;
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 45px;
+        bottom: 16px;
+        left: 30px;
+        color: red;
+
+    }
+    }
+}
