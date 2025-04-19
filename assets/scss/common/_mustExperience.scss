@@ -2,10 +2,11 @@
 
     .cs_card.cs_style_1{
     position: relative;
+    transition: transform 0.3s ease;
     
-    // &:hover{
-    //     transform: ;
-    // }
+    &:hover{
+        transform:scale(1.05) ;
+    }
     .cs_icon{
         position: absolute;
         background: var(--Gradient-1, linear-gradient(94deg, rgba(255, 255, 255, 0.40) 33.35%, rgba(255, 255, 255, 0.10) 91.75%));
@@ -22,6 +23,7 @@
         z-index: 1;
         padding: 16px;
         width: 100%;
+        overflow: hidden;
 
         :before{
             content: "";
@@ -30,6 +32,7 @@
             width: 100%;
             left: 0;
             bottom: 0;
+            z-index: -1;
             border-radius: 0px 0px 10px 10px;
             background: var(--Gradient-5, linear-gradient(0deg, #1D1D1D -23.78%, rgba(29, 29, 29, 0.00) 100%));
        }

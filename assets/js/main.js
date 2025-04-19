@@ -44,9 +44,7 @@
         }
         function stickyHeader() {
           var scroll = $(window).scrollTop();
-          console.log(scroll);
           if (scroll >= 10) {
-            console.log('hello');
             $('.cs_sticky_header').addClass('cs_sticky_active');
           } else {
             $('.cs_sticky_header').removeClass('cs_sticky_active');
