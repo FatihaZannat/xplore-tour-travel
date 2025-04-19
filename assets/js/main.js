@@ -13,6 +13,7 @@
     $(function (){
      dynamicBackground()
      mainNav()
+     stickyHeader()
 
         function mainNav() {
           $('.cs_nav').append('<span class="cs_menu_toggle"><span></span></span>');
@@ -36,6 +37,14 @@
           $('.cs_header_form_overlay').on('click', function () {
             $('.cs_header_form_wrap').removeClass('active');
           });
+        }
+        function stickyHeader() {
+          var scroll = $(window).scrollTop();
+          if (scroll >= 10) {
+            $('.cs_sticky_header').addClass('cs_sticky_active');
+          } else {
+            $('.cs_sticky_header').removeClass('cs_sticky_active');
+          }
         }
       
        

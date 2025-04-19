@@ -116,6 +116,7 @@
 .cs_bold {
   font-weight: 700;
 }
+
 .cs_secondary_font {
   font-family: var(--secondary-font);
 }
@@ -251,10 +252,11 @@
   &.cs_type_1{
     flex-direction: column;
     justify-content: space-between;
+    align-items: start;
     max-width: 540px;
   }
 }
-.cs_icon{
+.cs_icon.cs_style_1{
  height: 50px;
  width: 50px;
   border-radius: 50px;

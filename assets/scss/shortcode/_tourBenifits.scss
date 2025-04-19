@@ -1,14 +1,10 @@
 .cs_tour_benefits{
     background-color: #F3F3F3;
-    .cs_tour_benefits_in{
-        justify-content: space-between;
-        align-items: stretch;
-        gap: 40px;
-    }
-    .cs_tour_benefits_right{
+  
+    .cs_layer_cart.cs_style_1{
        
 
-        .cs_tour_benefits_right_in{
+        
             .cs_tour_benefits_card{ 
                 border-radius: 25px 25px 0px 0px;
                 padding: 24px 50px;   
@@ -29,7 +25,7 @@
                     margin-left: 25px;
                 }
             }
-        }
+        
     }
 
 }
