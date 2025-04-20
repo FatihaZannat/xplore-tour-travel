@@ -1,16 +1,18 @@
 .cs_tour_benefits{
     background-color: #F3F3F3;
+}
   
-    .cs_layer_card.cs_style_1{
+    .cs_layer_cards.cs_style_1{
        
 
         
-            .cs_tour_benefits_card{ 
+            .cs_layer_card{ 
                 border-radius: 25px 25px 0px 0px;
                 padding: 24px 50px;   
                 border: 1px solid var(--primary);
                &:not(:last-child){
-                border-bottom: none;              
+                border-bottom: none;      
+                padding-bottom: 44px;        
                }
                &:last-child{
                 border-radius: 25px ;
@@ -20,12 +22,12 @@
                    margin-top: -20px;
                 }
                         
-                .cs_tour_benefits_card_details{                   
-                    max-width: 433px;
+                .cs_layer_card_details{                   
+                    // max-width: 433px;
                     margin-left: 25px;
                 }
             }
         
     }
 
-}
+
