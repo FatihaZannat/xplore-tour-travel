@@ -1,0 +1,46 @@
+.cs_tour_benefits {
+  background-color: #f3f3f3;
+}
+.cs_iconbox.cs_style_1 {
+  padding: 24px 50px;
+  border: 1px solid var(--primary);
+  align-items: flex-start;
+  margin-left: -1px;
+  margin-right: -1px;
+  width: 100%;
+  border-radius: 25px 25px 0 0;
+  .cs_icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    flex: none;
+    border: 1px solid var(--primary);
+    transition: all 0.3s ease;
+  }
+  &:not(:last-child) {
+    border-bottom: none;
+    padding-bottom: 44px;
+  }
+  &:last-child {
+    border-radius: 25px;
+  }
+  &:not(:first-child) {
+    margin-top: -20px;
+  }
+
+  .cs_iconbox_details {
+    margin-left: 25px;
+  }
+  &.active {
+    background-color: var(--primary);
+    color: rgba(255, 255, 255, 0.75);
+    .cs_iconbox_title {
+      color: #fff;
+    }
+    .cs_icon {
+      background-color: rgba(255, 255, 255, 0.25);
+      border-color: transparent;
+      color: #fff;
+    }
+  }
+}

@@ -54,8 +54,6 @@
   }
 }
 
-
-
 @for $i from 1 through 50 {
   .cs_pr_#{$i} {
     padding-right: $i + px;
@@ -221,7 +219,7 @@
 .cs_btn.cs_style_2 {
   position: relative;
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     right: 0;
     bottom: 0;
@@ -241,32 +239,18 @@
     }
   }
 }
-.cs_section_heading.cs_style_1{
+.cs_section_heading.cs_style_1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 40px;
-  & > div{
+  & > div {
     max-width: 420px;
   }
-  &.cs_type_1{
+  &.cs_type_1 {
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
     max-width: 540px;
-  }
-}
-.cs_icon.cs_style_1{
- height: 50px;
- width: 50px;
-  border-radius: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  &.cs_type_1{
-    border: 1px solid var(--primary);
-  }
-  &.cs_gray{
-    background-color: #4F4F4F;
   }
 }

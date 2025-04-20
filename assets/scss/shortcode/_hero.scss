@@ -16,13 +16,10 @@
     align-items: center;
     justify-content: center;
     padding: 11px 24px;
-    background: var(
-      --Gradient-1,
-      linear-gradient(
-        94deg,
-        rgba(255, 255, 255, 0.4) 33.35%,
-        rgba(255, 255, 255, 0.1) 91.75%
-      )
+    background: linear-gradient(
+      94deg,
+      rgba(255, 255, 255, 0.4) 33.35%,
+      rgba(255, 255, 255, 0.1) 91.75%
     );
   }
   .cs_hero_title {
