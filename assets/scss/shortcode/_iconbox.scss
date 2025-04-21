@@ -16,6 +16,9 @@
     flex: none;
     border: 1px solid var(--primary);
     transition: all 0.3s ease;
+    i{
+      color: var(--primary);
+    }
   }
   &:not(:last-child) {
     border-bottom: none;
