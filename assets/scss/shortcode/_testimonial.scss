@@ -5,6 +5,7 @@
     border: 1px solid var(--primary);
     border-radius: 50%;
     color: var(--primary);
+    transition: all .3s ease;
     &:hover{
         background-color: var(--primary);
         color: var(--white);
@@ -21,6 +22,12 @@
 
     .cs_testimonial_avatar{
         padding-top: 24px;
+        img{
+            height: 48px;
+            width: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
         
         div{
             padding-left: 20px;

@@ -1,0 +1,36 @@
+.cs_form_field_section.cs_style_1{
+    height: 1569px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.cs_form_field_in{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+form{
+    max-width: 925px;
+    max-height: 354px;
+    padding: 56px 50px;
+    border-radius: 25px;
+    background-color: rgb(240, 240, 242);
+    font-size: 16px;
+}
+.cs_form_field{
+    display: block;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    padding-bottom: 17px;
+    background-color: rgb(240, 240, 242);
+    font-size: 16px;
+}
+.cs_brand{
+    :not(:last-child){
+        margin-right: 65px;
+    }
+}

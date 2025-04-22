@@ -208,7 +208,7 @@
   }
   &.cs_type_1 {
     border: none;
-    color: var(--secondary);
+    color: var(--white);
     background-color: var(--primary);
     &:hover {
       color: var(--primary);
@@ -251,6 +251,10 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
+  }
+  &.cs_type_2{
+    align-items: center;
+    gap: 0;
   }
 }
 .cs_video_block.cs_style_1 {

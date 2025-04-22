@@ -1,0 +1,44 @@
+.cs_footer.cs_style_1{
+    background-color: var(--primary);
+    color: var(--white);
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+.cs_footer_row{
+    display: flex;
+    gap: 100px;
+}
+.cs_footer_widget{
+    .cs_footer_widget_title{
+        h4{
+            color: var(--white);
+            margin-bottom: 12px;
+            font-weight: 700;
+            font-size: 16px;
+        }
+    }
+    .cs_footer_widget_menu{
+        list-style: none;
+        font-size: 16px;
+        li:not(:last-child){
+            margin-bottom: 8px;
+        }
+    }
+
+}
+.cs_footer_widget.cs_contacts{
+    .cs_footer_widget_title{
+        h4{
+            margin-bottom: 41px;
+        }
+    }
+    .cs_footer_widget_menu{
+        li{
+            margin-bottom: 21px;
+        }
+    }
+}
+.cs_copyright{
+    border-top: 1px solid #4F4F4F;
+    padding-top: 12px;
+}
