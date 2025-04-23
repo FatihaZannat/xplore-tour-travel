@@ -1,6 +1,6 @@
 .cs_footer.cs_style_1{
     background-color: var(--primary);
-    color: var(--white);
+    color: #ffffffbf;
     padding-top: 64px;
     padding-bottom: 64px;
 }
@@ -41,4 +41,6 @@
 .cs_copyright{
     border-top: 1px solid #4F4F4F;
     padding-top: 12px;
+    display: block;
+    text-align: right;
 }

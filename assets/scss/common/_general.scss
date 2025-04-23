@@ -4,7 +4,7 @@
 // google fonts
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
-@for $i from 1 through 105 {
+@for $i from 1 through 110 {
   .cs_mb_#{$i} {
     margin-bottom: $i + px;
   }
@@ -92,6 +92,7 @@
 .cs_fs_80 {
   font-size: 80px;
   line-height: 1.1em;
+  letter-spacing: 1.6px;
   // @media (max-width: 1199px) {
   //   font-size: 56px;
   // }
