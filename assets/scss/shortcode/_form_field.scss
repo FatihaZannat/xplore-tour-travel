@@ -1,5 +1,4 @@
 .cs_form_field_section.cs_style_1{
-    height: 1569px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -29,19 +28,9 @@ form{
     background-color: rgb(240, 240, 242);
     font-size: 16px;
 }
-.cs_checkbox{
-    display: inline-block;
-    height: 12px;
-    width: 12px;
-    padding: 6px;
-    margin-right: 26px;
-    border: 1px solid var(--primary);
-    border-radius: 5px;
-    position: relative;
-    i{
-        position: relative;
-        top: -15px;
-        left: -7px;
+.cs_brand_section{
+    p{
+        margin-top: 767px;
     }
 }
 .cs_brand{
