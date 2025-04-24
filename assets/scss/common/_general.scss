@@ -93,9 +93,6 @@
   font-size: 80px;
   line-height: 1.1em;
   letter-spacing: 1.6px;
-  // @media (max-width: 1199px) {
-  //   font-size: 56px;
-  // }
   @media (max-width: 991px) {
     font-size: 56px;
   }
@@ -132,7 +129,9 @@
 .cs_radius_50 {
   border-radius: 50px;
 }
-
+.cs_gap_y_40{
+  gap: 40px 0;
+}
 .cs_mp_0 {
   list-style: none;
   margin: 0;
@@ -196,6 +195,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  transition: all .3s ease;
   svg {
     margin-left: 10px;
   }
@@ -247,6 +247,10 @@
   gap: 40px;
   & > div {
     max-width: 420px;
+  }
+  @media (max-width: 991px){
+    flex-direction: column;
+    align-items: start;
   }
   &.cs_type_1 {
     flex-direction: column;
