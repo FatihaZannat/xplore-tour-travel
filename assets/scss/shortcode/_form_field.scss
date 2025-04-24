@@ -49,3 +49,10 @@ form{
         margin-right: 65px;
     }
 }
+@media screen and (max-width: 991px) {
+    .cs_section_heading{
+        p{
+            text-align: start;
+        }
+    }
+}
