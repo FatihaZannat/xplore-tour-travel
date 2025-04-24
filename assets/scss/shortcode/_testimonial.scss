@@ -1,36 +1,19 @@
-.cs_button_prev,
-.cs_button_next {
-    width: 48px;
-    height: 48px;
-    border: 1px solid var(--primary);
-    border-radius: 50%;
-    color: var(--primary);
-    transition: all .3s ease;
-    &:hover{
-        background-color: var(--primary);
-        color: var(--white);
-    }
-}
-.cs_button_prev{
-    margin-right: 16px;
-}
+.cs_testimonial_blockquote {
+  border: 1px solid var(--primary);
+  border-radius: 25px;
+  padding: 32px;
 
-.cs_testimonial_blockquote{
-    border: 1px solid  var(--primary);
-    border-radius: 25px;
-    padding: 32px;
-
-    .cs_testimonial_avatar{
-        padding-top: 24px;
-        img{
-            height: 48px;
-            width: 48px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-        
-        div{
-            padding-left: 20px;
-        }
+  .cs_testimonial_avatar {
+    padding-top: 24px;
+    img {
+      height: 48px;
+      width: 48px;
+      border-radius: 50%;
+      object-fit: cover;
     }
+
+    div {
+      padding-left: 20px;
+    }
+  }
 }

@@ -129,7 +129,7 @@
 .cs_radius_50 {
   border-radius: 50px;
 }
-.cs_gap_y_40{
+.cs_gap_y_40 {
   gap: 40px 0;
 }
 .cs_mp_0 {
@@ -158,6 +158,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.cs_gray_bg {
+  background-color: var(--gray);
 }
 .cs_heading_bg {
   background-color: rgb(169, 169, 225);
@@ -195,7 +198,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   svg {
     margin-left: 10px;
   }
@@ -248,7 +251,7 @@
   & > div {
     max-width: 420px;
   }
-  @media (max-width: 991px){
+  @media (max-width: 991px) {
     flex-direction: column;
     align-items: start;
   }
@@ -257,10 +260,10 @@
     justify-content: space-between;
     align-items: start;
   }
-  &.cs_type_2{
+  &.cs_type_2 {
     align-items: center;
     gap: 0;
-    p{
+    p {
       max-width: 926px;
     }
   }
