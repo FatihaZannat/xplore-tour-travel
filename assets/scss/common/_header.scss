@@ -31,6 +31,20 @@
       padding-right: 50px;
     }
   }
+  &.cs_type_1{
+    a{
+      color: var(--primary);
+    }
+    .cs_menu_toggle{
+     span{
+     background-color: var(--primary);
+     &::after,
+     &::before{
+      background-color: var(--primary);
+     }
+     }
+    }
+  }
 }
 
 .cs_site_header.cs_style_1 {

@@ -40,4 +40,13 @@
       background: linear-gradient(0deg, #1d1d1d -23.78%,rgba(29, 29, 29, 0) 100%);
     }
   }
+  &.cs_type_1{
+    .cs_card_info{
+      padding: 56px 24px 24px 24px;
+      ::before{
+        border-radius: 0px 0px 25px 25px;
+background: var(--Gradient-5, linear-gradient(0deg, #1D1D1D -23.78%, rgba(29, 29, 29, 0.00) 100%));
+      }
+    }
+  }
 }

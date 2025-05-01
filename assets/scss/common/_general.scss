@@ -178,7 +178,9 @@
 .cs_white_color {
   color: var(--white);
 }
-
+.cs_white_bg{
+  background-color: var(--white);
+}
 .cs_primary_bg {
   background-color: var(--primary);
 }
@@ -260,14 +262,11 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
+    max-width:  80%;
   }
-  &.cs_type_2 {
-    align-items: center;
-    gap: 0;
-    p {
-      max-width: 926px;
-    }
-  }
+}
+.cs_width_473{
+  max-width: 473px;
 }
 .cs_video_block.cs_style_1 {
   min-height: 560px;
@@ -322,6 +321,24 @@
   }
 }
 .cs_page_heading.cs_style_1{
-  height: 443px;
-  padding: 131px 0 50px;
+  padding: 231px 0 131px 0;
+}
+.cs_pagination_box{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 56px;
+  margin-top: 115px;
+}
+.cs_pagination_arrow{
+  transition: all 0.3s ease;
+  color: var(--secondary);
+  opacity: .25;
+  &:hover{
+    color: var(--primary);
+    opacity: 1;
+  }
 }
