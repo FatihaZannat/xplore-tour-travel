@@ -27,8 +27,7 @@
     padding: 16px;
     width: 100%;
     overflow: hidden;
-
-    :before {
+    &:before {
       content: "";
       position: absolute;
       height: 100%;

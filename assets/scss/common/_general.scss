@@ -54,7 +54,7 @@
   }
 }
 
-@for $i from 1 through 50 {
+@for $i from 1 through 100 {
   .cs_pr_#{$i} {
     padding-right: $i + px;
   }
@@ -202,6 +202,7 @@
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
+  text-decoration: none;
   svg {
     margin-left: 10px;
   }
@@ -217,9 +218,13 @@
     border: none;
     color: var(--white);
     background-color: var(--primary);
+    outline: none;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
     &:hover {
       color: var(--primary);
       background-color: transparent;
+      border: 1px solid var(--primary);
     }
   }
 }
@@ -262,7 +267,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
-    max-width:  80%;
   }
 }
 .cs_width_473{

@@ -3,6 +3,10 @@
     color: #ffffffbf;
     padding-top: 64px;
     padding-bottom: 64px;
+    a:hover{
+        text-decoration: underline;
+        color: var(--white);
+      }
 }
 .cs_footer_row{
     display: flex;
@@ -30,6 +34,7 @@
     .cs_footer_widget_title{
         h4{
             margin-bottom: 41px;
+            font-size: 20px;
         }
     }
     .cs_footer_widget_menu{
@@ -43,4 +48,10 @@
     padding-top: 12px;
     display: block;
     text-align: right;
+}
+.cs_footer_col{
+    flex: 1;
+  &:last-child{
+    flex: 2;
+   }
 }
