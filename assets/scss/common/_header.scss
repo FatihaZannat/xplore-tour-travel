@@ -19,7 +19,7 @@
     position: relative;
   }
   .cs_main_header_in {
-    height: 100px;
+    height: 90px;
     transition: all 0.3s ease;
   }
   .cs_main_header_right {
@@ -33,32 +33,24 @@
   }
   &.cs_type_1{
     a{
-      color: var(--primary);
-    }
-    .cs_menu_toggle{
-     span{
-     background-color: var(--primary);
-     &::after,
-     &::before{
-      background-color: var(--primary);
-     }
-     }
+      color: var(--white);
     }
     .cs_main_header_in{
       height: 80px;
     }
+    
   }
 }
 
 .cs_site_header.cs_style_1 {
   &.cs_sticky_active {
-    background-color: var(--primary);
+    background-color: var(--white);
     box-shadow: 0 10px 10px -10px rgba(255, 255, 255, 0.06);
     .cs_main_header_in {
       height: 80px;
     }
     &.cs_type_1{
-      background-color: var(--white);
+      background-color: var(--primary);
     }
   }
   &.cs_color_1 {
@@ -77,6 +69,26 @@
   .cs_site_header.cs_style_1 {
     .cs_nav {
       display: flex;
+    }
+    &.cs_type_1{
+      .cs_nav .cs_nav_list_wrap {
+        background-color: var(--primary);
+        color: var(--white);
+      }
+      .cs_menu_toggle{ 
+        span{
+          background-color: var(--white);
+          &::after,
+          &::before{
+           background-color: var(--white);
+          }
+       }
+       &.cs_toggle_active{
+        span{
+          background-color: var(--primary);
+        }
+       }
+      }
     }
   }
 }
@@ -151,7 +163,7 @@
           position: relative;
           height: inherit;
           align-items: center;
-          color: var(--white);
+          color: var(--primary);
           &:hover {
             opacity: 0.65;
           }
@@ -382,8 +394,8 @@
       position: fixed;
       width: 100vw;
       left: -100vw;
-      background-color: var(--primary);
-      color: var(--white);
+      background-color: var(--white);
+      color: var(--primary);
       top: 0;
       height: 100vh;
       line-height: 1.6em;
@@ -435,7 +447,7 @@
     span:after {
       width: 100%;
       height: 2px;
-      background-color: var(--white);
+      background-color: var(--primary);
       display: block;
     }
 
@@ -475,7 +487,7 @@
 
   .cs_toggle_active {
     span {
-      background-color: var(--primary);
+      background-color: var(--white);
       transition-delay: 0.2s;
 
       &:before {
