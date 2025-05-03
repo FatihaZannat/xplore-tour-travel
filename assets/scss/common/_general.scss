@@ -4,7 +4,7 @@
 // google fonts
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
-@for $i from 1 through 135 {
+@for $i from 1 through 160 {
   .cs_mb_#{$i} {
     margin-bottom: $i + px;
   }
@@ -16,7 +16,7 @@
     }
   }
 }
-@for $i from 1 through 135 {
+@for $i from 1 through 160 {
   .cs_mt_#{$i} {
     margin-top: $i + px;
   }
@@ -57,6 +57,11 @@
 @for $i from 1 through 100 {
   .cs_pr_#{$i} {
     padding-right: $i + px;
+  }
+}
+@for $i from 1 through 150 {
+  .cs_pl_#{$i} {
+    padding-left: $i + px;
   }
 }
 
@@ -280,6 +285,11 @@
   height: 560px;
   padding: 40px;
 }
+.cs_video_block.cs_style_3{
+  height: 40%;
+  width: 80%;
+  border-radius: 25px;
+}
 .cs_player_btn {
   height: 100px;
   width: 100px;
@@ -324,8 +334,9 @@
     opacity: 0;
   }
 }
-.cs_page_heading.cs_style_1{
-  padding: 231px 0 131px 0;
+.cs_page_banner.cs_style_1{
+  padding: 120px 0 50px ;
+  min-height: 443px;
 }
 .cs_pagination_box{
   list-style: none;
