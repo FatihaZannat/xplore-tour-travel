@@ -68,9 +68,6 @@
 .cs_fs_16 {
   font-size: 16px;
   line-height: 1.5em;
-  // @media (max-width: 991px) {
-  //   font-size: 26px;
-  // }
 }
 .cs_fs_20 {
   font-size: 20px;
@@ -79,30 +76,19 @@
 
 .cs_fs_36 {
   font-size: 36px;
-  line-height: 1.1111em;
-  // @media (max-width: 991px) {
-  //   font-size: 32px;
-  // }
+  line-height: 1.11em;
 }
 .cs_fs_64 {
   font-size: 64px;
   line-height: 1.125em;
   letter-spacing: -1.28px;
-  // @media (max-width: 1199px) {
-  //   font-size: 46px;
-  // }
-  // @media (max-width: 991px) {
-  //   font-size: 40px;
-  // }
 }
 .cs_fs_80 {
   font-size: 80px;
   line-height: 1.1em;
   letter-spacing: 1.6px;
-  @media (max-width: 991px) {
-    font-size: 56px;
-  }
 }
+
 .cs_normal {
   font-weight: 400;
 }
@@ -180,7 +166,7 @@
 .cs_white_color {
   color: var(--white);
 }
-.cs_white_bg{
+.cs_white_bg {
   background-color: var(--white);
 }
 .cs_primary_bg {
@@ -274,18 +260,18 @@
     align-items: start;
   }
 }
-.cs_width_473{
+.cs_width_473 {
   max-width: 473px;
 }
 .cs_video_block.cs_style_1 {
   min-height: 560px;
   padding: 80px 30px;
-  }
-.cs_video_block.cs_style_2{
+}
+.cs_video_block.cs_style_2 {
   height: 560px;
   padding: 40px;
 }
-.cs_video_block.cs_style_3{
+.cs_video_block.cs_style_3 {
   height: 40%;
   width: 80%;
   border-radius: 25px;
@@ -334,12 +320,12 @@
     opacity: 0;
   }
 }
-.cs_page_banner.cs_style_1{
-  padding: 80px 0 ;
+.cs_page_banner.cs_style_1 {
+  padding: 80px 0;
   min-height: 355px;
   margin-top: 90px;
 }
-.cs_pagination_box{
+.cs_pagination_box {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -349,29 +335,29 @@
   gap: 56px;
   margin-top: 115px;
   transition: all 0.3s ease;
-  a{
+  a {
     color: var(--secondary);
-    &:hover{
+    &:hover {
       color: var(--primary);
     }
   }
 }
-.cs_pagination_arrow{
+.cs_pagination_arrow {
   transition: all 0.3s ease;
   color: var(--secondary);
-  opacity: .25;
-  &:hover{
+  opacity: 0.25;
+  &:hover {
     color: var(--primary);
     opacity: 1;
   }
 }
-.cs_list.cs_style_1{
-  li{
-    &:not(:last-child){
+.cs_list.cs_style_1 {
+  li {
+    &:not(:last-child) {
       margin-bottom: 8px;
     }
-    span{
-      &:first-child{
+    span {
+      &:first-child {
         margin-right: 16px;
       }
     }
