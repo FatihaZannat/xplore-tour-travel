@@ -1,10 +1,16 @@
 .cs_video_block.cs_style_2{
-    .cs_video_block_in{
-        display: flex;
-        flex-direction: column;
-        height: 100%;
+    .cs_video_title{
+        bottom: 40px;
+
     }
-    .row{
-        flex: 1 0 auto;
+    .cs_player_btn_wrap{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+    }
+    .cs_video_subtitle{
+        top: 40px;
+        right: 40px;
     }
 }
