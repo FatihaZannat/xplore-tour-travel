@@ -1,18 +1,25 @@
-.cs_about_section_img{
-    min-width: 617px;
-    min-height: 627px;
+.cs_about.cs_style_1 {
+  .cs_about_section_img {
+    width: 100%;
+    min-height: 630px;
     border-radius: 25px;
-}
-.cs_about_video_img{
+    object-fit: cover;
+  }
+  .cs_about_video_img {
     position: absolute;
-    top: -60px;
-    right: -20px;
+    top: 0px;
+    right: 0px;
     border-radius: 25px;
     box-shadow: 0 0 0 20px white;
-}
-.cs_about_left{
+  }
+  .cs_about_left {
     padding-right: 105px;
-}
-.cs_about_right{
+  }
+  .cs_about_right {
     padding-left: 50px;
+  }
+  .cs_about_left_in {
+    padding-right: 20px;
+    padding-top: 60px;
+  }
 }
