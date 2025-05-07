@@ -48,3 +48,11 @@
     }
   }
 }
+.cs_card_left{
+  a{
+    transition: all 0.3s ease;
+    &:hover{
+     opacity: 0.65;
+    }
+  }
+}
