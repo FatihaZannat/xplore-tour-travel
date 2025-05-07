@@ -2,6 +2,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
+
+    form{
+        max-width: 925px;
+        max-height: 354px;
+        padding: 56px 50px;
+        border-radius: 25px;
+        background-color: rgb(240, 240, 242);
+        font-size: 16px;
+    }
 }
 .cs_form_field_in{
     display: flex;
@@ -10,14 +19,7 @@
     justify-content: space-between;
     align-items: center;
 }
-form{
-    max-width: 925px;
-    max-height: 354px;
-    padding: 56px 50px;
-    border-radius: 25px;
-    background-color: rgb(240, 240, 242);
-    font-size: 16px;
-}
+
 .cs_form_field{
     display: block;
     width: 100%;
@@ -96,4 +98,24 @@ form{
             opacity: 0;
         }
     }
+}
+
+.cs_form.cs_style_2{
+   .cs_form_in{
+    background-color: var(--gray);
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 10px;
+    label{
+        display: block;
+    }
+    input{
+        border: none;
+        outline: none;
+        background-color: inherit;
+    }
+   }
+    
 }

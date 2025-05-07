@@ -4,7 +4,7 @@
 // google fonts
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
-@for $i from 1 through 160 {
+@for $i from 0 through 160 {
   .cs_mb_#{$i} {
     margin-bottom: $i + px;
   }
@@ -54,7 +54,7 @@
   }
 }
 
-@for $i from 1 through 100 {
+@for $i from 1 through 105 {
   .cs_pr_#{$i} {
     padding-right: $i + px;
   }
@@ -165,9 +165,6 @@
   align-items: center;
   justify-content: center;
 }
-.cs_gray_bg {
-  background-color: var(--gray);
-}
 .cs_heading_bg {
   background-color: rgb(169, 169, 225);
 }
@@ -192,6 +189,9 @@
 
 .cs_secondary_bg {
   background-color: var(--secondary);
+}
+.cs_gray_bg {
+  background-color: var(--gray);
 }
 
 // --------------------------------------
@@ -336,7 +336,7 @@
 }
 .cs_page_banner.cs_style_1{
   padding: 80px 0 ;
-  min-height: 350px;
+  min-height: 355px;
   margin-top: 90px;
 }
 .cs_pagination_box{
@@ -348,6 +348,13 @@
   align-items: center;
   gap: 56px;
   margin-top: 115px;
+  transition: all 0.3s ease;
+  a{
+    color: var(--secondary);
+    &:hover{
+      color: var(--primary);
+    }
+  }
 }
 .cs_pagination_arrow{
   transition: all 0.3s ease;
@@ -356,5 +363,17 @@
   &:hover{
     color: var(--primary);
     opacity: 1;
+  }
+}
+.cs_list.cs_style_1{
+  li{
+    &:not(:last-child){
+      margin-bottom: 8px;
+    }
+    span{
+      &:first-child{
+        margin-right: 16px;
+      }
+    }
   }
 }

@@ -1,0 +1,13 @@
+.cs_pricing{
+    padding-bottom: 64px;
+    border-bottom: 1px solid #1414141a;
+}
+.cs_pricing_details{
+    display: flex;
+    .cs_info_title{
+        width: 20%;
+    }
+    .cs_info_subtitle{
+        width: 80%;
+    }
+}
