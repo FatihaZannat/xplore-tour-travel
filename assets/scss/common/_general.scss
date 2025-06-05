@@ -218,6 +218,13 @@
       border: 1px solid var(--primary);
     }
   }
+  &.cs_type_2{
+    background-color: var(--white);
+    color: var(--primary);
+    &:hover{
+      background-color: #ffffffac;
+    }
+  }
 }
 .cs_btn.cs_style_2 {
   position: relative;
@@ -263,63 +270,6 @@
 .cs_width_473 {
   max-width: 473px;
 }
-.cs_video_block.cs_style_1 {
-  min-height: 560px;
-  padding: 80px 30px;
-}
-.cs_video_block.cs_style_2 {
-  height: 560px;
-  padding: 40px;
-}
-.cs_video_block.cs_style_3 {
-  height: 40%;
-  width: 80%;
-  border-radius: 25px;
-}
-.cs_player_btn {
-  height: 100px;
-  width: 100px;
-  display: inline-flex;
-  position: relative;
-  border-radius: 50px;
-}
-.cs_player_btn:before,
-.cs_player_btn:after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    92deg,
-    rgba(255, 255, 255, 0.6) 16.51%,
-    rgba(255, 255, 255, 0.2) 94.64%
-  );
-  border-radius: 50%;
-}
-
-.cs_player_btn:before {
-  z-index: 0;
-  animation: pulse-border 1500ms ease-out infinite;
-}
-.cs_player_btn:after {
-  z-index: 1;
-  transition: all 280ms;
-}
-
-@keyframes pulse-border {
-  0% {
-    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
-    opacity: 0;
-  }
-}
 .cs_page_banner.cs_style_1 {
   padding: 80px 0;
   min-height: 355px;
@@ -336,8 +286,11 @@
   margin-top: 115px;
   transition: all 0.3s ease;
   a {
-    color: var(--secondary);
+    color: rgb(20 20 20 / 25%);
     &:hover {
+      color: var(--primary);
+    }
+    &.active{
       color: var(--primary);
     }
   }
@@ -361,5 +314,31 @@
         margin-right: 16px;
       }
     }
+  }
+}
+.cs_icon.cs_style_1{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  i{
+    display: flex;
+  }
+}
+// accordian
+.cs_accordian{
+  background: var(--gray);
+  &:not(:last-child){
+    margin-bottom: 24px;
+  }
+}
+.cs_accordian_body{
+  display: flex;
+  justify-content: space-between;
+  ul{
+    padding-left: 145px;
+  }
+  img{
+    height: 100%;
+    margin-top: -40px;
   }
 }

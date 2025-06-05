@@ -15,6 +15,8 @@
     modalVideo();
     hoverTab();
     slickInit();
+    accordian()
+    isotopInit()
 
     $.exists = function (selector) {
       return $(selector).length > 0;
@@ -224,5 +226,59 @@
         });
       }
     }
+
+     /*--------------------------------------------------------------
+    6. Accordian
+  --------------------------------------------------------------*/
+  function accordian() {
+    $('.cs_accordian').children('.cs_accordian_body').hide();
+    $('.cs_accordian.active').children('.cs_accordian_body').show();
+    $('.cs_accordian_head').on('click', function () {
+      $(this)
+        .parent('.cs_accordian')
+        .siblings()
+        .children('.cs_accordian_body')
+        .slideUp(250);
+      $(this).siblings().slideDown(250);
+      $(this)
+        .parent()
+        .parent()
+        .siblings()
+        .find('.cs_accordian_body')
+        .slideUp(250);
+      /* Accordian Active Class */
+      $(this).parents('.cs_accordian').addClass('active');
+      $(this).parent('.cs_accordian').siblings().removeClass('active');
+    });
+  }
+   /*--------------------------------------------------------------
+    7. Isotop
+  --------------------------------------------------------------*/
+  function isotopInit() {
+    if ($.exists('.cs_isotop')) {
+      $('.cs_isotop').isotope({
+        itemSelector: '.cs_isotop_item',
+        transitionDuration: '0.60s',
+        percentPosition: true,
+        masonry: {
+          columnWidth: '.cs_grid_sizer',
+        },
+      });
+      /* Active Class of Portfolio*/
+      $('.cs_isotop_filter ul li').on('click', function (event) {
+        $(this).siblings('.active').removeClass('active');
+        $(this).addClass('active');
+        event.preventDefault();
+      });
+      /*=== Portfolio filtering ===*/
+      $('.cs_isotop_filter ul').on('click', 'a', function () {
+        var filterElement = $(this).attr('data-filter');
+        $('.cs_isotop').isotope({
+          filter: filterElement,
+        });
+      });
+    }
+  }
+
   });
 })(jQuery); // end of use strict
