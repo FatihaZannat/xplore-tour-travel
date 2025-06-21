@@ -331,13 +331,21 @@
     margin-bottom: 24px;
   }
 }
+.cs_accordian_head{
+  p{
+    color: var(--primary);
+  }
+}
 .cs_accordian_body{
   display: flex;
   justify-content: space-between;
+  transition: all 0.03s ease;
+  color: var(--primary);
   ul{
     padding-left: 145px;
   }
   img{
+    transition: all 0.03s ease;
     height: 100%;
     margin-top: -40px;
   }
