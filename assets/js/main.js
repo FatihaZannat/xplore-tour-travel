@@ -17,6 +17,7 @@
     slickInit();
     accordian()
     isotopInit()
+    heartToggle()
 
     $.exists = function (selector) {
       return $(selector).length > 0;
@@ -252,7 +253,15 @@
     });
   }
    /*--------------------------------------------------------------
-    7. Isotop
+    8. heart toggle
+  --------------------------------------------------------------*/
+  function heartToggle(){
+    $(".cs_icon").on("click", function(){
+       $(this).children("i").toggleClass("fa-solid");
+    })
+  }
+   /*--------------------------------------------------------------
+    8. Isotop
   --------------------------------------------------------------*/
   function isotopInit() {
     if ($.exists('.cs_isotop')) {

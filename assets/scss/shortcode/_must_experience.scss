@@ -26,11 +26,14 @@
     right: 36px;
     color: white;
     transition: all 0.3s ease;
+    border: none;
+    outline: none;
     cursor: pointer;
-    &:hover{
-      color: rgba(0, 0, 0, 0.301);
-    }
+    &.active{
+    color: red;
   }
+  }
+  
 
   .cs_card_info {
     position: absolute;
