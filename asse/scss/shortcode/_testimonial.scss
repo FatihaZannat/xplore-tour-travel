@@ -1,0 +1,27 @@
+.cs_testimonial_blockquote {
+  border: 1px solid var(--primary);
+  border-radius: 25px;
+  padding: 32px;
+
+  .cs_testimonial_avatar {
+    padding-top: 24px;
+    img {
+      height: 48px;
+      width: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    div {
+      padding-left: 20px;
+    }
+  }
+}
+.cs_testimonial_blockquote_icon{
+  height: 100%;
+  display: flex;
+  align-items: end;
+}
+.cs_checkbox{
+  margin-right: 20px;
+}
