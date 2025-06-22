@@ -257,7 +257,7 @@
   --------------------------------------------------------------*/
   function heartToggle(){
     $(".cs_icon").on("click", function(){
-       $(this).children("i").toggleClass("fa-solid");
+       $(this).toggleClass("active");
     })
   }
    /*--------------------------------------------------------------

@@ -30,7 +30,7 @@
     outline: none;
     cursor: pointer;
     &.active{
-    color: red;
+    color: var(--secondary);
   }
   }
   
