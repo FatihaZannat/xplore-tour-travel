@@ -14,7 +14,13 @@
     position: absolute;
     background: linear-gradient(94deg,rgba(255, 255, 255, 0.4) 33.35%,rgba(255, 255, 255, 0.1) 91.75%);
     top: 16px;
-    right: 36px;
+    right: 36px;  
+    color: rgb(186, 66, 66);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    &:hover{
+      color: rgba(0, 0, 0, 0.301);
+    }
   }
   .cs_card_info {
     position: absolute;
