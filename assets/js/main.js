@@ -18,6 +18,7 @@
     accordian()
     isotopInit()
     heartToggle()
+    tabs()
 
     $.exists = function (selector) {
       return $(selector).length > 0;
@@ -261,7 +262,21 @@
     })
   }
    /*--------------------------------------------------------------
-    8. Isotop
+    9. tabs
+  --------------------------------------------------------------*/
+ function tabs() {
+    $('.cs_tabs .cs_tab_links a').on('click', function (e) {
+      var currentAttrValue = $(this).attr('href');
+      $('.cs_tabs ' + currentAttrValue)
+        .fadeIn(400)
+        .siblings()
+        .hide();
+      $(this).parents('li').addClass('active').siblings().removeClass('active');
+      e.preventDefault();
+    });
+  }
+   /*--------------------------------------------------------------
+    10. Isotop
   --------------------------------------------------------------*/
   function isotopInit() {
     if ($.exists('.cs_isotop')) {

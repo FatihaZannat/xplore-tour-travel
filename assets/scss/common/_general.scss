@@ -329,6 +329,7 @@
 // accordian
 .cs_accordian{
   background: var(--gray);
+  cursor: pointer;
   &:not(:last-child){
     margin-bottom: 24px;
   }
@@ -343,12 +344,38 @@
   justify-content: space-between;
   transition: all 0.03s ease;
   color: var(--primary);
+  
   ul{
-    padding-left: 145px;
+    list-style: disc;
+    transition: all 0.3s ease;
+    padding-top: 42px;
+    margin-left: -209px;
   }
-  img{
-    transition: all 0.03s ease;
-    height: 100%;
-    margin-top: -40px;
-  }
-}
+   }
+  
+   .cs_tab_links{
+    li{
+      color: #14141440;
+      &.active{
+        color: var(--primary);
+        border-bottom: 4px solid var(--primary);
+        padding-bottom: 12px;
+      }
+    }
+    :not(:first-child){
+      margin-left: 40px;
+    }
+   }
+   .cs_tab_body{
+    margin-top: 40px;
+   }
+   .cs_tab{
+    display: none;
+   }
+   .cs_tab.active{
+    display: block;
+   }
+   textarea{
+    padding: 20px;
+    margin-bottom: 30px;
+   }
