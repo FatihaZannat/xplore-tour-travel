@@ -19,7 +19,7 @@
     isotopInit()
     heartToggle()
     tabs()
-    timeAndDatePicker()
+    datePicker ()
 
     $.exists = function (selector) {
       return $(selector).length > 0;
@@ -307,12 +307,20 @@
     /*--------------------------------------------------------------
     11. Date  Picker
   --------------------------------------------------------------*/
-  function timeAndDatePicker() {
-    $('.cs_time').timepicker({
-      minTime: '9:00am',
-      maxTime: '11:00pm',
+  function datePicker (){
+     $("#myDatePicker").datepicker({
+      dateFormat: 'dd-mm-yy', 
+      onSelect: function (dateText, inst) {
+        const date = $(this).datepicker('getDate');
+
+        const day = date.getDate();
+        const month = date.toLocaleString('default', { month: 'long' });
+        const year = date.getFullYear();
+
+        const formattedDate = `${day}-${month}-${year}`;
+        $(this).val(formattedDate);
+      }
     });
-    $('.cs_date').datepicker({});
   }
 
 

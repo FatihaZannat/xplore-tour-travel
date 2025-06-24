@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/slick.min.css">
-    <link rel="stylesheet" href="assets/css/timepicker.min.css">
+    <link rel="stylesheet" href="assets/css/jquery-date-picker.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>xPlore- Travel Tour Agency</title>
 </head>
@@ -281,23 +281,25 @@
 							<div class="cs_tab active" id="tab_1">
 								<form action="" class="cs_form cs_style_2">
 									<div class="cs_form_in cs_mb_16">
-										<label for="" class="cs_bold cs_primary_color">Full Name</label>
+										<label class="cs_bold cs_primary_color">Full Name</label>
 										<input type="text" placeholder="Clara Jaden Smith">
 									</div>
 									<div class="cs_form_in cs_mb_16">
-										<label class="cs_bold cs_primary_color">Tour Package</label>
-										<select class="cs_package_select">
+										<label for="packageid" class="cs_bold cs_primary_color">Tour Package</label>
+										<select id="packageid" name="package" class="cs_package_select">
 											<option value="tour_1">Tropical Paradise Recreation</option>
 											<option value="tour_2">Island Hopping</option>
 											<option value="tour_3">departure from Bali</option>
 										</select>
 									</div>
 									<div class="cs_form_in">
-										<input type="datetime" name="update" id="update" placeholder="04-12-1996" class="cs_date hasDatepicker">
-									<!-- <div class="cs_date_time">
-											<label for="">chack in:</label>
-											<span>04-12-1996</span>
-										</div> -->
+										<label class="cs_bold cs_primary_color">Starting Date</label>
+										<div class="d-flex justify-content-between">
+											<input type="text" placeholder="24-june-2024" id="myDatePicker">
+											<span>
+												<i class="fa-solid fa-angle-down"></i>
+											</span>
+										</div>
 									</div>
 
 								</form>
@@ -502,7 +504,7 @@
 	<!-- end footer section -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
      <script src="assets/js/jquery.slick.min.js"></script>
-     <script src="assets/js/jquery-timepicker.min.js"></script>
+     <script src="assets/js/jquery-date-picker.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
