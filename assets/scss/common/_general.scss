@@ -340,17 +340,21 @@
   }
 }
 .cs_accordian_body{
-  display: flex;
-  justify-content: space-between;
   transition: all 0.03s ease;
   color: var(--primary);
+  padding-left: 125px;
   
   ul{
     list-style: disc;
     transition: all 0.3s ease;
-    padding-top: 42px;
-    margin-left: -209px;
+    padding-right: 200px;
   }
+   }
+   .cs_arrordian_img{
+        position: absolute;
+        top: 50%;
+        transform: translate(102%, -50%);
+        left: 50%;
    }
   
    .cs_tab_links{
