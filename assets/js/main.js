@@ -19,6 +19,7 @@
     isotopInit()
     heartToggle()
     tabs()
+    timeAndDatePicker()
 
     $.exists = function (selector) {
       return $(selector).length > 0;
@@ -303,6 +304,17 @@
       });
     }
   }
+    /*--------------------------------------------------------------
+    11. Date  Picker
+  --------------------------------------------------------------*/
+  function timeAndDatePicker() {
+    $('.cs_time').timepicker({
+      minTime: '9:00am',
+      maxTime: '11:00pm',
+    });
+    $('.cs_date').datepicker({});
+  }
+
 
   });
 })(jQuery); // end of use strict
