@@ -333,6 +333,11 @@
   &:not(:last-child){
     margin-bottom: 24px;
   }
+  &.active{
+    .cs_arrordian_img{
+      scale: 1;
+    }
+  }
 }
 .cs_accordian_head{
   p{
@@ -353,8 +358,11 @@
    .cs_arrordian_img{
         position: absolute;
         top: 50%;
-        transform: translate(102%, -50%);
-        left: 50%;
+        transform: translateY(-50%);
+        padding-left: 374px;
+        transition: 0.3s ease; 
+        transition-delay:.25s;
+        scale: 0;
    }
   
    .cs_tab_links{
