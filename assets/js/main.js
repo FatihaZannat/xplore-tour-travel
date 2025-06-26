@@ -20,6 +20,7 @@
     heartToggle()
     tabs()
     datePicker ()
+    quantityInit()
 
     $.exists = function (selector) {
       return $(selector).length > 0;
@@ -322,6 +323,74 @@
       }
     });
   }
+   /*--------------------------------------------------------------
+    12. Quantity
+  --------------------------------------------------------------*/
+  function quantityInit() {
+  // Close dropdown on outside click
+  $(document).on('click', function (event) {
+    if (!$(event.target).closest('.cs_quantity_wrap').length) {
+      $('.cs_quantity_wrap').removeClass('active');
+    }
+  });
+
+  // Toggle dropdown open/close
+  $('.cs_quantity_btn').on('click', function () {
+    $('.cs_quantity_wrap').removeClass('active');
+    $(this).closest('.cs_quantity_wrap').toggleClass('active');
+  });
+
+  // Set initial values
+  $('.cs_quantity_btn').each(function () {
+    var initialNumber = parseInt($(this).data('initial-number'), 10);
+    const label = formatGuestLabel(initialNumber);
+    $(this).text(label);
+    $(this)
+      .siblings('.cs_quantity_dropdown')
+      .find('.cs_quantity_number')
+      .text(pad(initialNumber));
+  });
+
+  // Increment
+  $('.cs_quantity_increment').on('click', function () {
+    const $wrap = $(this).closest('.cs_quantity_wrap');
+    const $number = $wrap.find('.cs_quantity_number');
+    const max = parseInt($number.data('max-value'), 10);
+    const current = parseInt($number.text(), 10);
+
+    if (current < max) {
+      const updated = current + 1;
+      $number.text(pad(updated));
+      $wrap.find('.cs_quantity_btn').text(formatGuestLabel(updated));
+    }
+  });
+
+  // Decrement
+  $('.cs_quantity_decrement').on('click', function () {
+    const $wrap = $(this).closest('.cs_quantity_wrap');
+    const $number = $wrap.find('.cs_quantity_number');
+    const min = parseInt($number.data('min-value'), 10);
+    const current = parseInt($number.text(), 10);
+
+    if (current > min) {
+      const updated = current - 1;
+      $number.text(pad(updated));
+      $wrap.find('.cs_quantity_btn').text(formatGuestLabel(updated));
+    }
+  });
+
+  // Pad number (e.g., 1 => 01)
+  function pad(num) {
+    return ('0' + num).slice(-2);
+  }
+
+  // Format label (e.g., 1 => "1 Adult", 2 => "2 Adults")
+  function formatGuestLabel(num) {
+    return num + ' Adult' + (num > 1 ? '(s)' : '');
+  }
+}
+
+
 
 
   });

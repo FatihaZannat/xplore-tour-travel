@@ -125,8 +125,16 @@ input::-webkit-inner-spin-button {
   border: transparent;
   background: transparent;
   outline: none;
-  color: inherit;
+  color: rgba(20, 20, 20, 0.5);
+  appearance: none;
+}
+.cs_dropdown{
+  right: 10px;
 }
 input{
-  color: inherit;
+  color: rgba(20, 20, 20, 0.5);
+}
+cs_calculate_area,
+.cs_quantity_btn{
+   color: rgba(20, 20, 20, 0.5);
 }

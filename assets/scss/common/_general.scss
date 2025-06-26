@@ -227,6 +227,17 @@
       background-color: #ffffffac;
     }
   }
+  &.cs_type_3{
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px 32px;
+    background: var(--primary);
+    &:hover{
+      background-color: var(--white);
+      color: var(--primary);
+      border: 1px solid var(--primary);
+    }
+  }
 }
 .cs_btn.cs_style_2 {
   position: relative;
@@ -335,7 +346,7 @@
   }
   &.active{
     .cs_arrordian_img{
-      scale: 1;
+      transform: translateY(-50%) scale(1);
     }
   }
 }
@@ -358,11 +369,10 @@
    .cs_arrordian_img{
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
+        transform: translateY(-50%) scale(0);
         padding-left: 374px;
         transition: 0.3s ease; 
         transition-delay:.25s;
-        scale: 0;
    }
   
    .cs_tab_links{
@@ -390,4 +400,28 @@
    textarea{
     padding: 20px;
     margin-bottom: 30px;
+   }
+   .cs_quantity_dropdown{
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid var(--gray);
+    display: none;
+   }
+   .cs_quantity_dropdown_item{
+    display: flex;
+    justify-content: space-between;
+   }
+   .cs_quantity_decrement,
+   .cs_quantity_increment{
+    border: none;
+    outline: none;
+    background: transparent;
+   }
+   .cs_quantity_wrap.active{
+    .cs_quantity_dropdown{
+      display: flex;
+    }
    }
