@@ -3,12 +3,13 @@
   padding: 150px 0 72px;
   background-color: #141414;
 
+    
+  @media (max-width: 1199px){
+    padding: 100px 0 60px;
+  }
   .cs_hero_in {
-    // padding: 94px 0 72px;
     position: relative;
     width: 100%;
-    // display: flex;
-    // align-items: center;
   }
   .cs_hero_subtitle {
     display: inline-flex;

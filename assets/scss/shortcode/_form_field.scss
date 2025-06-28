@@ -2,21 +2,24 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-
+}
   form {
     max-width: 925px;
     max-height: 354px;
     padding: 56px 50px;
     border-radius: 25px;
-    background-color: rgb(240, 240, 242);
+    background:  linear-gradient(92deg, rgba(255, 255, 255, 0.60) 16.51%, rgba(255, 255, 255, 0.20) 94.64%);
+
+/* Glassmorphism 2 */
+backdrop-filter: blur(5px);
     font-size: 16px;
-    input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    input::-webkit-outer-spin-button, 
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
   }
-}
+
 .cs_form_field_in {
   display: flex;
   flex-direction: column;
@@ -32,7 +35,7 @@ input::-webkit-inner-spin-button {
   border: none;
   border-bottom: 1px solid var(--primary);
   padding-bottom: 16px;
-  background-color: rgb(240, 240, 242);
+  background-color: transparent;
   font-size: 16px;
 }
 .cs_brand_section {
@@ -131,10 +134,25 @@ input::-webkit-inner-spin-button {
 .cs_dropdown{
   right: 10px;
 }
-input{
+input,
+textarea{
   color: rgba(20, 20, 20, 0.5);
 }
 cs_calculate_area,
 .cs_quantity_btn{
    color: rgba(20, 20, 20, 0.5);
+}
+.cs_contact_section.cs_style_2{
+  background: var(--gray);
+  .cs_form_field {
+    padding: 16px 16px;
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+  }
+  textarea{
+    border: none;
+    border-radius: 10px;
+    outline: none;
+  }
 }
