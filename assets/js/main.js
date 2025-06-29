@@ -29,6 +29,9 @@
     $(window).on("scroll", function () {
       stickyHeader();
     });
+    $(window).on("resize", function () {
+      isotopInit()
+    });
     /*--------------------------------------------------------------
     1. main nav
   --------------------------------------------------------------*/
@@ -280,31 +283,6 @@
    /*--------------------------------------------------------------
     10. Isotop
   --------------------------------------------------------------*/
-  // function isotopInit() {
-  //   if ($.exists('.cs_isotop')) {
-  //     $('.cs_isotop').isotope({
-  //       itemSelector: '.cs_isotop_item',
-  //       transitionDuration: '0.60s',
-  //       percentPosition: true,
-  //       masonry: {
-  //         columnWidth: '.cs_grid_sizer',
-  //       },
-  //     });
-  //     /* Active Class of Portfolio*/
-  //     $('.cs_isotop_filter ul li').on('click', function (event) {
-  //       $(this).siblings('.active').removeClass('active');
-  //       $(this).addClass('active');
-  //       event.preventDefault();
-  //     });
-  //     /*=== Portfolio filtering ===*/
-  //     $('.cs_isotop_filter ul').on('click', 'a', function () {
-  //       var filterElement = $(this).attr('data-filter');
-  //       $('.cs_isotop').isotope({
-  //         filter: filterElement,
-  //       });
-  //     });
-  //   }
-  // }
   function isotopInit() {
       if ($.exists(".cs_isotop")) {
         $(".cs_isotop").isotope({
@@ -327,8 +305,9 @@
             filter: filterElement,
           });
         });
-      }
-    }
+}
+}
+
     /*--------------------------------------------------------------
     11. Date  Picker
   --------------------------------------------------------------*/

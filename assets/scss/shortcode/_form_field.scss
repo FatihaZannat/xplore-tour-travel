@@ -28,7 +28,8 @@ backdrop-filter: blur(5px);
   align-items: center;
 }
 
-.cs_form_field {
+.cs_form_field,
+textarea {
   display: block;
   width: 100%;
   outline: none;
@@ -38,6 +39,7 @@ backdrop-filter: blur(5px);
   background-color: transparent;
   font-size: 16px;
 }
+
 .cs_brand_section {
   padding-top: 692px;
 }
@@ -142,17 +144,4 @@ cs_calculate_area,
 .cs_quantity_btn{
    color: rgba(20, 20, 20, 0.5);
 }
-.cs_contact_section.cs_style_2{
-  background: var(--gray);
-  .cs_form_field {
-    padding: 16px 16px;
-    border: none;
-    background-color: white;
-    border-radius: 10px;
-  }
-  textarea{
-    border: none;
-    border-radius: 10px;
-    outline: none;
-  }
-}
+
