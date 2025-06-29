@@ -15,12 +15,12 @@
     modalVideo();
     hoverTab();
     slickInit();
-    accordian()
-    isotopInit()
-    heartToggle()
-    tabs()
-    datePicker ()
-    quantityInit()
+    accordian();
+    isotopInit();
+    heartToggle();
+    tabs();
+    //datePicker();
+    quantityInit();
 
     $.exists = function (selector) {
       return $(selector).length > 0;
@@ -30,7 +30,7 @@
       stickyHeader();
     });
     $(window).on("resize", function () {
-      isotopInit()
+      isotopInit();
     });
     /*--------------------------------------------------------------
     1. main nav
@@ -234,62 +234,66 @@
       }
     }
 
-     /*--------------------------------------------------------------
+    /*--------------------------------------------------------------
     6. Accordian
   --------------------------------------------------------------*/
-  function accordian() {
-    $('.cs_accordian').children('.cs_accordian_body').hide();
-    $('.cs_accordian.active').children('.cs_accordian_body').show();
-    $('.cs_accordian_head').on('click', function () {
-      $(this)
-        .parent('.cs_accordian')
-        .siblings()
-        .children('.cs_accordian_body')
-        .slideUp(250);
-      $(this).siblings().slideDown(250);
-      $(this)
-        .parent()
-        .parent()
-        .siblings()
-        .find('.cs_accordian_body')
-        .slideUp(250);
-      /* Accordian Active Class */
-      $(this).parents('.cs_accordian').addClass('active');
-      $(this).parent('.cs_accordian').siblings().removeClass('active');
-    });
-  }
-   /*--------------------------------------------------------------
+    function accordian() {
+      $(".cs_accordian").children(".cs_accordian_body").hide();
+      $(".cs_accordian.active").children(".cs_accordian_body").show();
+      $(".cs_accordian_head").on("click", function () {
+        $(this)
+          .parent(".cs_accordian")
+          .siblings()
+          .children(".cs_accordian_body")
+          .slideUp(250);
+        $(this).siblings().slideDown(250);
+        $(this)
+          .parent()
+          .parent()
+          .siblings()
+          .find(".cs_accordian_body")
+          .slideUp(250);
+        /* Accordian Active Class */
+        $(this).parents(".cs_accordian").addClass("active");
+        $(this).parent(".cs_accordian").siblings().removeClass("active");
+      });
+    }
+    /*--------------------------------------------------------------
     8. heart toggle
   --------------------------------------------------------------*/
-  function heartToggle(){
-    $(".cs_icon").on("click", function(){
-       $(this).toggleClass("active");
-    })
-  }
-   /*--------------------------------------------------------------
+    function heartToggle() {
+      $(".cs_icon").on("click", function () {
+        $(this).toggleClass("active");
+      });
+    }
+    /*--------------------------------------------------------------
     9. tabs
   --------------------------------------------------------------*/
- function tabs() {
-    $('.cs_tabs .cs_tab_links a').on('click', function (e) {
-      var currentAttrValue = $(this).attr('href');
-      $('.cs_tabs ' + currentAttrValue)
-        .fadeIn(400)
-        .siblings()
-        .hide();
-      $(this).parents('li').addClass('active').siblings().removeClass('active');
-      e.preventDefault();
-    });
-  }
-   /*--------------------------------------------------------------
+    function tabs() {
+      $(".cs_tabs .cs_tab_links a").on("click", function (e) {
+        var currentAttrValue = $(this).attr("href");
+        $(".cs_tabs " + currentAttrValue)
+          .fadeIn(400)
+          .siblings()
+          .hide();
+        $(this)
+          .parents("li")
+          .addClass("active")
+          .siblings()
+          .removeClass("active");
+        e.preventDefault();
+      });
+    }
+    /*--------------------------------------------------------------
     10. Isotop
   --------------------------------------------------------------*/
-  function isotopInit() {
+    function isotopInit() {
       if ($.exists(".cs_isotop")) {
         $(".cs_isotop").isotope({
           itemSelector: ".cs_isotop_item",
           transitionDuration: "0.60s",
           masonry: {
-            columnWidth: ".cs_isotop_item",
+            columnWidth: ".cs_grid_sizer",
           },
         });
         /* Active Class of Portfolio*/
@@ -298,103 +302,99 @@
           $(this).addClass("active");
           event.preventDefault();
         });
-        /=== Portfolio filtering ===/
+        /=== Portfolio filtering ===/;
         $(".cs_isotop_filter ul").on("click", "a", function () {
           var filterElement = $(this).attr("data-filter");
           $(".cs_isotop").isotope({
             filter: filterElement,
           });
         });
-}
-}
+      }
+    }
 
     /*--------------------------------------------------------------
     11. Date  Picker
   --------------------------------------------------------------*/
-  function datePicker (){
-     $("#myDatePicker").datepicker({
-      dateFormat: 'dd-mm-yy', 
-      onSelect: function (dateText, inst) {
-        const date = $(this).datepicker('getDate');
+    function datePicker() {
+      $("#myDatePicker").datepicker({
+        dateFormat: "dd-mm-yy",
+        onSelect: function (dateText, inst) {
+          const date = $(this).datepicker("getDate");
 
-        const day = date.getDate();
-        const month = date.toLocaleString('default', { month: 'long' });
-        const year = date.getFullYear();
+          const day = date.getDate();
+          const month = date.toLocaleString("default", { month: "long" });
+          const year = date.getFullYear();
 
-        const formattedDate = `${day}-${month}-${year}`;
-        $(this).val(formattedDate);
-      }
-    });
-  }
-   /*--------------------------------------------------------------
+          const formattedDate = `${day}-${month}-${year}`;
+          $(this).val(formattedDate);
+        },
+      });
+    }
+    /*--------------------------------------------------------------
     12. Quantity
   --------------------------------------------------------------*/
-  function quantityInit() {
-  // Close dropdown on outside click
-  $(document).on('click', function (event) {
-    if (!$(event.target).closest('.cs_quantity_wrap').length) {
-      $('.cs_quantity_wrap').removeClass('active');
+    function quantityInit() {
+      // Close dropdown on outside click
+      $(document).on("click", function (event) {
+        if (!$(event.target).closest(".cs_quantity_wrap").length) {
+          $(".cs_quantity_wrap").removeClass("active");
+        }
+      });
+
+      // Toggle dropdown open/close
+      $(".cs_quantity_btn").on("click", function () {
+        $(".cs_quantity_wrap").removeClass("active");
+        $(this).closest(".cs_quantity_wrap").toggleClass("active");
+      });
+
+      // Set initial values
+      $(".cs_quantity_btn").each(function () {
+        var initialNumber = parseInt($(this).data("initial-number"), 10);
+        const label = formatGuestLabel(initialNumber);
+        $(this).text(label);
+        $(this)
+          .siblings(".cs_quantity_dropdown")
+          .find(".cs_quantity_number")
+          .text(pad(initialNumber));
+      });
+
+      // Increment
+      $(".cs_quantity_increment").on("click", function () {
+        const $wrap = $(this).closest(".cs_quantity_wrap");
+        const $number = $wrap.find(".cs_quantity_number");
+        const max = parseInt($number.data("max-value"), 10);
+        const current = parseInt($number.text(), 10);
+
+        if (current < max) {
+          const updated = current + 1;
+          $number.text(pad(updated));
+          $wrap.find(".cs_quantity_btn").text(formatGuestLabel(updated));
+        }
+      });
+
+      // Decrement
+      $(".cs_quantity_decrement").on("click", function () {
+        const $wrap = $(this).closest(".cs_quantity_wrap");
+        const $number = $wrap.find(".cs_quantity_number");
+        const min = parseInt($number.data("min-value"), 10);
+        const current = parseInt($number.text(), 10);
+
+        if (current > min) {
+          const updated = current - 1;
+          $number.text(pad(updated));
+          $wrap.find(".cs_quantity_btn").text(formatGuestLabel(updated));
+        }
+      });
+
+      // Pad number (e.g., 1 => 01)
+      function pad(num) {
+        return ("0" + num).slice(-2);
+      }
+
+      // Format label (e.g., 1 => "1 Adult", 2 => "2 Adults")
+      function formatGuestLabel(num) {
+        return num + " Adult" + (num > 1 ? "(s)" : "");
+      }
     }
-  });
-
-  // Toggle dropdown open/close
-  $('.cs_quantity_btn').on('click', function () {
-    $('.cs_quantity_wrap').removeClass('active');
-    $(this).closest('.cs_quantity_wrap').toggleClass('active');
-  });
-
-  // Set initial values
-  $('.cs_quantity_btn').each(function () {
-    var initialNumber = parseInt($(this).data('initial-number'), 10);
-    const label = formatGuestLabel(initialNumber);
-    $(this).text(label);
-    $(this)
-      .siblings('.cs_quantity_dropdown')
-      .find('.cs_quantity_number')
-      .text(pad(initialNumber));
-  });
-
-  // Increment
-  $('.cs_quantity_increment').on('click', function () {
-    const $wrap = $(this).closest('.cs_quantity_wrap');
-    const $number = $wrap.find('.cs_quantity_number');
-    const max = parseInt($number.data('max-value'), 10);
-    const current = parseInt($number.text(), 10);
-
-    if (current < max) {
-      const updated = current + 1;
-      $number.text(pad(updated));
-      $wrap.find('.cs_quantity_btn').text(formatGuestLabel(updated));
-    }
-  });
-
-  // Decrement
-  $('.cs_quantity_decrement').on('click', function () {
-    const $wrap = $(this).closest('.cs_quantity_wrap');
-    const $number = $wrap.find('.cs_quantity_number');
-    const min = parseInt($number.data('min-value'), 10);
-    const current = parseInt($number.text(), 10);
-
-    if (current > min) {
-      const updated = current - 1;
-      $number.text(pad(updated));
-      $wrap.find('.cs_quantity_btn').text(formatGuestLabel(updated));
-    }
-  });
-
-  // Pad number (e.g., 1 => 01)
-  function pad(num) {
-    return ('0' + num).slice(-2);
-  }
-
-  // Format label (e.g., 1 => "1 Adult", 2 => "2 Adults")
-  function formatGuestLabel(num) {
-    return num + ' Adult' + (num > 1 ? '(s)' : '');
-  }
-}
-
-
-
-
   });
 })(jQuery); // end of use strict
