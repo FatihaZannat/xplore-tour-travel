@@ -25,6 +25,10 @@
   .cs_hero_title {
     text-align: center;
     margin-bottom: 109px;
+
+    @media (max-width: 1199px){
+      margin-bottom: 80px;
+    }
   }
 
   .cs_hero_footer {

@@ -20,6 +20,35 @@
           }
 
   }
+  .cs_form_section{
+    form{
+      :nth-child(1){
+         @media (max-width: 575px) {
+          margin-top: 20px;
+          
+        }
+      }
+      :nth-child(2){
+         @media (max-width: 575px) {
+          margin-top: 20px;
+        }
+      }
+      :nth-child(3){
+        margin-top: 56px;
+        
+        @media (max-width: 575px) {
+          margin-top: 20px;
+        }
+      }
+      :nth-child(4){
+        margin-top: 68px;
+
+         @media (max-width: 575px) {
+          // margin-top: 30px;
+        }
+      }
+    }
+  }
 
 .cs_form_field_in {
   display: flex;
@@ -46,19 +75,24 @@
 
 .cs_brand_section {
   padding-top: 692px;
+  .cs_slider.cs_style_1{
+    padding-bottom: 50px;
+  }
 }
 .cs_brand {
   &:not(:last-child) {
     margin-right: 65px;
   }
 }
-// @media screen and (max-width: 991px) {
-//   .cs_section_heading {
-//     p {
-//       text-align: start;
-//     }
-//   }
-// }
+@media screen and (max-width: 991px) {
+  .cs_section_heading {
+    p {
+      br{
+        display: none;
+      }
+    }
+  }
+}
 .cs_form_checkbox_wraper{
   @media (max-width: 991px) {
     flex-direction: column;

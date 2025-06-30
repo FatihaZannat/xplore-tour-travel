@@ -28,9 +28,11 @@
 .cs_testimonial{
      .cs_section_heading.cs_style_1{
       align-items: flex-end;
+      margin-bottom: 80px;
 
      @media (max-width: 991px) {
       align-items: flex-start;
+      margin-bottom: 60px;
   }
  }
 }
