@@ -5,19 +5,20 @@
 }
   form {
     max-width: 925px;
-    max-height: 354px;
+    // max-height: 354px;
     padding: 56px 50px;
     border-radius: 25px;
     background:  linear-gradient(92deg, rgba(255, 255, 255, 0.60) 16.51%, rgba(255, 255, 255, 0.20) 94.64%);
 
 /* Glassmorphism 2 */
-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
     font-size: 16px;
     input::-webkit-outer-spin-button, 
     input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
-}
+          }
+
   }
 
 .cs_form_field_in {
@@ -26,10 +27,13 @@ backdrop-filter: blur(5px);
   height: 100%;
   justify-content: space-between;
   align-items: center;
+  
+  .cs_section_heading.cs_style_1{
+    align-items: center;
+  }
 }
 
-.cs_form_field,
-textarea {
+.cs_form_field {
   display: block;
   width: 100%;
   outline: none;
@@ -48,11 +52,17 @@ textarea {
     margin-right: 65px;
   }
 }
-@media screen and (max-width: 991px) {
-  .cs_section_heading {
-    p {
-      text-align: start;
-    }
+// @media screen and (max-width: 991px) {
+//   .cs_section_heading {
+//     p {
+//       text-align: start;
+//     }
+//   }
+// }
+.cs_form_checkbox_wraper{
+  @media (max-width: 991px) {
+    flex-direction: column;
+    gap: 20px 0;
   }
 }
 .cs_custom_checkbox {
@@ -109,6 +119,7 @@ textarea {
 }
 
 .cs_form.cs_style_2 {
+  padding: 0;
   .cs_form_in {
     background-color: var(--gray);
     padding: 20px 24px;

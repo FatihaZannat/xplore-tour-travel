@@ -19,7 +19,7 @@
     isotopInit();
     heartToggle();
     tabs();
-    //datePicker();
+    datePicker();
     quantityInit();
 
     $.exists = function (selector) {
@@ -28,6 +28,7 @@
 
     $(window).on("scroll", function () {
       stickyHeader();
+      console.log('object');
     });
     $(window).on("resize", function () {
       isotopInit();
@@ -63,6 +64,7 @@
   --------------------------------------------------------------*/
     function stickyHeader() {
       var scroll = $(window).scrollTop();
+      console.log(scroll);
       if (scroll >= 10) {
         $(".cs_sticky_header").addClass("cs_sticky_active");
       } else {

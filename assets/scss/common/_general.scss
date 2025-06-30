@@ -4,33 +4,55 @@
 // google fonts
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
-@for $i from 0 through 160 {
+@for $i from 0 through 21 {
   .cs_mb_#{$i} {
     margin-bottom: $i + px;
   }
 }
-
-@media screen and (max-width: 991px) {
-  @for $i from 1 through 70 {
-    .cs_mb_lg_#{$i} {
-      margin-bottom: $i + px;
-    }
-  }
+.cs_mb_24{
+  margin-bottom: 24px;
+}
+.cs_mb_40{
+  margin-bottom: 40px;
+}
+.cs_mb_48{
+  margin-bottom: 48px;
+}
+.cs_mb_64{
+  margin-bottom: 64px;
+}
+.cs_mb_80{
+  margin-bottom: 80px;
+}
+.cs_mt_7{
+  margin-bottom: 7px;
+}
+.cs_mt_18{
+  margin-bottom: 18px;
+}
+.cs_mt_25{
+  margin-bottom: 25px;
+}
+.cs_mt_28{
+  margin-bottom: 28px;
+}
+.cs_mt_56{
+  margin-bottom: 56px;
+}
+.cs_mt_68{
+  margin-bottom: 68px;
+}
+.cs_pr_90{
+  padding-right: 90px;
+}
+.cs_pr_16{
+  padding-right: 16px;
+}
+.cs_pb_50{
+  padding-bottom: 50px;
 }
 
-@for $i from 1 through 160 {
-  .cs_mt_#{$i} {
-    margin-top: $i + px;
-  }
-}
 
-@media screen and (max-width: 991px) {
-  @for $i from 1 through 70 {
-    .cs_mt_lg_#{$i} {
-      margin-bottom: $i + px;
-    }
-  }
-}
 
 @for $i from 1 through 160 {
   .cs_pb_#{$i} {
@@ -95,6 +117,13 @@
   font-size: 64px;
   line-height: 1.125em;
   letter-spacing: -1.28px;
+  
+   @media (max-width: 1199px) {
+    font-size: 50px;
+  }
+   @media (max-width: 767px) {
+    font-size: 40px;
+  }
 }
 
 .cs_fs_80 {
@@ -106,8 +135,8 @@
     font-size: 60px;
   }
 
-  @media (max-width: 991px) {
-    font-size: 40px;
+  @media (max-width: 767px) {
+    font-size: 50px;
   }
 }
 
@@ -412,6 +441,16 @@
     flex-wrap: wrap;
     padding: 24px 40px;
 
+    @media(max-width:1399px){
+      padding: 24px 15px;
+      gap: 20px 35px;
+    }
+     @media (max-width: 991px) {
+          padding: 24px 40px;
+    }
+     @media (max-width: 453px) {
+          padding-left: 40px;
+    }
     p {
       color: var(--primary);
     }
@@ -423,6 +462,20 @@
     padding-right: 190px;
     padding-bottom: 24px;
     margin-top: -12px;
+
+    @media (max-width:1399px) {
+          padding-left: 114px;
+          padding-right: 225px;
+    }
+    @media (max-width:1199px) {
+          padding-right: 40px;
+    }
+    @media (max-width: 991px) {
+          padding-left: 138px;
+    }
+    @media (max-width: 453px) {
+          padding-left: 40px;
+    }
 
     ul {
       list-style: disc;
@@ -437,6 +490,7 @@
     transform: translateY(-50%) scale(0);
     transition: 0.4s ease;
     transition-delay: .3s;
+
   }
 
   &:not(:last-child) {
@@ -446,6 +500,13 @@
   &.active {
     .cs_arrordian_img {
       transform: translateY(-50%) scale(1);
+
+       @media (max-width:1199px) {
+       position: relative;
+       transform: translateY(0%) scale(1);
+       padding-left: 50px;
+       padding-top: 20px;
+    }
     }
   }
 }
@@ -511,6 +572,9 @@ textarea {
   .cs_quantity_dropdown {
     display: flex;
   }
+}
+.cs_count{
+  padding-left: 20px;
 }
 
 .cs_map {

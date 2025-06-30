@@ -25,3 +25,12 @@
 .cs_checkbox{
   margin-right: 20px;
 }
+.cs_testimonial{
+     .cs_section_heading.cs_style_1{
+      align-items: flex-end;
+
+     @media (max-width: 991px) {
+      align-items: flex-start;
+  }
+ }
+}
