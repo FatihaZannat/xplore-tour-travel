@@ -37,9 +37,6 @@
 
   .cs_card_info {
     position: absolute;
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
     bottom: 0;
     left: 0;
     z-index: 1;
@@ -58,6 +55,11 @@
       border-radius: 0px 0px 10px 10px;
       background: linear-gradient(0deg, #1d1d1d -23.78%, rgba(29, 29, 29, 0) 100%);
     }
+    .cs_card_details{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    } 
   }
 
   &.cs_type_1 {
@@ -70,23 +72,28 @@
     }
   }
 }
-
-.cs_card_left {
-  a {
-    transition: all 0.3s ease;
-
-    &:hover {
-      opacity: 0.65;
-    }
-  }
-
-  .cs_card_subtitle {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
-    i {
-      display: flex;
-    }
+.cs_card_subtitle{
+  i{
+    padding-right: 8px;
   }
 }
+
+// .cs_card_left {
+//   a {
+//     transition: all 0.3s ease;
+
+//     &:hover {
+//       opacity: 0.65;
+//     }
+//   }
+
+//   .cs_card_subtitle {
+//     display: flex;
+//     align-items: center;
+//     gap: 8px;
+
+//     i {
+//       display: flex;
+//     }
+//   }
+// }

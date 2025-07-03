@@ -4,6 +4,12 @@
     width: 100%;
     transition: transform 0.4s ease;
   }
+  .cs_team_info{
+    margin-top: 24px;
+    h3{
+      margin-bottom: 8px;
+    }
+  }
   .cs_social {
     opacity: 0;
     visibility: hidden;

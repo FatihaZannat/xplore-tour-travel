@@ -3,9 +3,14 @@
   background-size: cover;
   background-position: top center;
 }
+.cs_contact_form_wrapper{
+  form{
+    margin: auto;
+  }
+}
   form {
     max-width: 925px;
-    // max-height: 354px;
+    margin: auto;
     padding: 56px 50px;
     border-radius: 25px;
     background:  linear-gradient(92deg, rgba(255, 255, 255, 0.60) 16.51%, rgba(255, 255, 255, 0.20) 94.64%);
@@ -19,35 +24,6 @@
     margin: 0;
           }
 
-  }
-  .cs_form_section{
-    form{
-      :nth-child(1){
-         @media (max-width: 575px) {
-          margin-top: 20px;
-          
-        }
-      }
-      :nth-child(2){
-         @media (max-width: 575px) {
-          margin-top: 20px;
-        }
-      }
-      :nth-child(3){
-        margin-top: 56px;
-        
-        @media (max-width: 575px) {
-          margin-top: 20px;
-        }
-      }
-      :nth-child(4){
-        margin-top: 68px;
-
-         @media (max-width: 575px) {
-          // margin-top: 30px;
-        }
-      }
-    }
   }
 
 .cs_form_field_in {

@@ -12,7 +12,7 @@
 }
 
 .cs_culture_journey_wraper {
-
+    position: relative;
     .cs_left_arrow,
     .cs_right_arrow {
         position: absolute;
@@ -23,10 +23,23 @@
 
     .cs_left_arrow {
         left: 0px;
+         margin-right: 0 !important;
+        @media (max-width: 1399px) {
+            margin-left: -6%;
+        }
+        @media (max-width: 1199px) {
+            margin-left: -9%;
+        }
     }
 
     .cs_right_arrow {
         right: 0px;
+         @media (max-width: 1399px) {
+            margin-right: -6%;
+        }
+         @media (max-width: 1199px) {
+            margin-right: -9%;
+        }
     }
 }
 
@@ -45,12 +58,13 @@
 }
 
 .cs_europe_journey_img {
-    width: 387px;
+    width: 100%;
     height: 329px;
     transition: all 0.3s ease;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    border-radius: 25px;
 
     &:hover {
         .cs_search_icon_overlay {
