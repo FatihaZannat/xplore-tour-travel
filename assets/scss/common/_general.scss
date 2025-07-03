@@ -352,6 +352,9 @@
   align-items: center;
   gap: 40px;
 
+  @media (max-width: 1199px) {
+    align-items: start;
+  }
   &>div {
     max-width: 420px;
   }
@@ -549,7 +552,7 @@
 }
 
 textarea {
-  padding: 20px;
+  padding: 20px 0;
   margin-bottom: 30px;
 }
 
@@ -585,7 +588,7 @@ textarea {
 }
 
 .cs_map {
-  height: 620px;
+  height: 470px;
 }
 
 .cs_map {
