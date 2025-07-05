@@ -2,21 +2,26 @@
   border: 1px solid var(--primary);
   border-radius: 25px;
   padding: 32px;
-
-  .cs_testimonial_avatar {
+}
+  .cs_avatar.cs_style_1{
     margin-top: 24px;
+     transition: all 0.03s ease;
     img {
       height: 48px;
       width: 48px;
       border-radius: 50%;
       object-fit: cover;
+     
+      opacity: 0;
+      position: relative;
+      top: 20px;
     }
 
     div {
       padding-left: 20px;
     }
   }
-}
+
 .cs_testimonial_blockquote_icon{
   height: 100%;
   display: flex;
@@ -35,4 +40,12 @@
       margin-bottom: 40px;
   }
  }
+}
+.slick-active{
+  .cs_avatar.cs_style_1{
+   img{
+    opacity: 1;
+    top: 0;
+   }
+  }
 }
