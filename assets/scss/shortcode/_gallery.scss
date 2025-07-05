@@ -9,10 +9,22 @@
 .cs_culture_journey {
     width: 1080px;
     height: 537px;
+    @media (max-width:1399px) {
+            width: 900px;
+        }
+    @media (max-width:1399px) {
+            width: 900px;
+        }
+    @media (max-width:1199px) {
+            width: 760px;
+        }
+    @media (max-width:991px) {
+            width: 560px;
+        }
 }
 
 .cs_culture_journey_wraper {
-    position: relative;
+    // position: relative;
     .cs_left_arrow,
     .cs_right_arrow {
         position: absolute;
@@ -23,23 +35,10 @@
 
     .cs_left_arrow {
         left: 0px;
-         margin-right: 0 !important;
-        @media (max-width: 1399px) {
-            margin-left: -6%;
-        }
-        @media (max-width: 1199px) {
-            margin-left: -9%;
-        }
     }
 
     .cs_right_arrow {
         right: 0px;
-         @media (max-width: 1399px) {
-            margin-right: -6%;
-        }
-         @media (max-width: 1199px) {
-            margin-right: -9%;
-        }
     }
 }
 

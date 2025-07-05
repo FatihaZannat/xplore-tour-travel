@@ -12,6 +12,9 @@
 .cs_mb_24{
   margin-bottom: 24px;
 }
+.cs_mb_28{
+  margin-bottom: 28px;
+}
 .cs_mb_40{
   margin-bottom: 40px;
 }
@@ -25,13 +28,13 @@
   margin-bottom: 80px;
 }
 .cs_mt_7{
-  margin-bottom: 7px;
+  margin-top: 7px;
 }
 .cs_mt_18{
-  margin-bottom: 18px;
+  margin-top: 18px;
 }
 .cs_mt_25{
-  margin-bottom: 25px;
+  margin-top: 25px;
 }
 .cs_mb_32{
   margin-bottom: 32px;
@@ -141,6 +144,9 @@
 
   @media (max-width: 767px) {
     font-size: 50px;
+  }
+  @media (max-width: 575px) {
+    font-size: 30px;
   }
 }
 
@@ -368,6 +374,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
+    max-width: 540px;
   }
 }
 

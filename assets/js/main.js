@@ -19,8 +19,9 @@
     isotopInit();
     heartToggle();
     tabs();
-    datePicker();
     quantityInit();
+    lightGallery()
+    datePicker();
 
     $.exists = function (selector) {
       return $(selector).length > 0;
@@ -28,7 +29,6 @@
 
     $(window).on("scroll", function () {
       stickyHeader();
-      console.log('object');
     });
     $(window).on("resize", function () {
       isotopInit();
@@ -64,7 +64,6 @@
   --------------------------------------------------------------*/
     function stickyHeader() {
       var scroll = $(window).scrollTop();
-      console.log(scroll);
       if (scroll >= 10) {
         $(".cs_sticky_header").addClass("cs_sticky_active");
       } else {
@@ -398,5 +397,22 @@
         return num + " Adult" + (num > 1 ? "(s)" : "");
       }
     }
+
+  //     15. Light Gallery
+  // --------------------------------------------------------------*
+
+  function lightGallery() {
+  
+    $(".cs_lightgallery").each(function () {
+      $(this).lightGallery({
+        selector: ".cs_lightbox_item",
+        subHtmlSelectorRelative: false,
+        thumbnail: true,
+        mousewheel: true,
+      });
+    });
+  }
+
+
   });
 })(jQuery); // end of use strict
