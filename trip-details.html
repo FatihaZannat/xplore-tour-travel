@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/slick.min.css">
     <link rel="stylesheet" href="assets/css/jquery-date-picker.min.css">
+    <link rel="stylesheet" href="assets/css/lightgallery.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>xPlore- Travel Tour Agency</title>
 </head>
@@ -288,21 +289,29 @@
 									<div class="cs_form_in cs_mb_16">
 										<label class="cs_bold cs_primary_color">Number of Guests</label>
 										<div class="cs_quantity_wrap position-relative">
-												<span class="cs_quantity_btn d-inline-flex w-100" data-initial-number="02"></span>
+												<input type="button" name="guest" class="cs_quantity_btn" value="2 Adults" id="guest">
 												<span class="cs_dropdown position-absolute">
 													<i class="fa-solid fa-angle-down"></i>
 												</span>
 											<div class="cs_quantity_dropdown">
 												<div class="cs_quantity_dropdown_item">
-													<span>guest:</span>
-													<div class="cs_count">
-														<button type="button" class="cs_quantity_decrement">
-															<i class="fa-solid fa-minus"></i>
-														</button>
-														<span class="cs_quantity_number" data-min-value="1" data-max-value="50">01</span>
-														<button type="button" class="cs_quantity_increment">
-															<i class="fa-solid fa-plus"></i>
-														</button>
+													<span class="cs_quantity_title">Adults:</span>
+													<div class="cs_quantity cs_adult">
+														<input type="number" name="number" min="1" max="3" step="1" value="2">
+														<div class="cs_quantity_nav">
+															<div class="cs_quantity_button cs_quantity_up">+</div>
+															<div class="cs_quantity_button cs_quantity_down">-</div>
+														</div>
+													</div>
+												</div>
+												<div class="cs_quantity_dropdown_item">
+													<span class="cs_quantity_title">Child:</span>
+													<div class="cs_quantity cs_children">
+														<input type="number" name="number" min="0" max="3" step="1" value="0">
+														<div class="cs_quantity_nav">
+															<div class="cs_quantity_button cs_quantity_up">+</div>
+															<div class="cs_quantity_button cs_quantity_down">-</div>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -393,7 +402,7 @@
 								<div class="cs_slide">
 									<div class="cs_testimonial_blockquote">
 										<blockquote>My travel dreams finally came true, thanks to them. I explored places I never thought I would see, and everything was seamless from start to finish during the trip.</blockquote>
-										<div class="cs_testimonial_avatar d-flex">
+										<div class="cs_avatar cs_style_1 d-flex">
 											<img src="assets/img/avatar_1.jpg" alt="avatar_1">
 											<div>
 												<h3 class="cs_mp_0 cs_fs_16 cs_bold">Priya Marcella</h3>
@@ -405,7 +414,7 @@
 								<div class="cs_slide">
 									<div class="cs_testimonial_blockquote">
 										<blockquote>They provided an amazing adventure that I'll never forget. The accommodations were top-notch, and the itinerary was a perfect trip of relaxation and excitement Jose.</blockquote>
-										<div class="cs_testimonial_avatar d-flex">
+										<div class="cs_avatar cs_style_1 d-flex">
 											<img src="assets/img/avatar_2.jpg" alt="avatar_1">
 											<div>
 												<h3 class="cs_mp_0 cs_fs_16 cs_bold">Jose Miguel</h3>
@@ -417,7 +426,7 @@
 								<div class="cs_slide">
 									<div class="cs_testimonial_blockquote">
 										<blockquote>My travel dreams finally came true, thanks to them. I explored places I never thought I would see, and everything was seamless from start to finish during the trip.</blockquote>
-										<div class="cs_testimonial_avatar d-flex">
+										<div class="cs_avatar cs_style_1 d-flex">
 											<img src="assets/img/avatar_1.jpg" alt="avatar_1">
 											<div>
 												<h3 class="cs_mp_0 cs_fs_16 cs_bold">Priya Marcella</h3>
@@ -429,7 +438,7 @@
 								<div class="cs_slide">
 									<div class="cs_testimonial_blockquote">
 										<blockquote>They provided an amazing adventure that I'll never forget. The accommodations were top-notch, and the itinerary was a perfect trip of relaxation and excitement Jose.</blockquote>
-										<div class="cs_testimonial_avatar d-flex">
+										<div class="cs_avatar cs_style_1 d-flex">
 											<img src="assets/img/avatar_2.jpg" alt="avatar_1">
 											<div>
 												<h3 class="cs_mp_0 cs_fs_16 cs_bold">Jose Miguel</h3>
@@ -542,7 +551,8 @@
 	<!-- end footer section -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
      <script src="assets/js/jquery.slick.min.js"></script>
-     <script src="assets/js/jquery-date-picker.min.js"></script>
+	<script src="./assets/js/jquery-date-picker.min.js"></script>
+	<script src="./assets/js/lightgallery.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

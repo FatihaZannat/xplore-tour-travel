@@ -578,20 +578,29 @@ textarea {
   justify-content: space-between;
 }
 
-.cs_quantity_decrement,
-.cs_quantity_increment {
-  border: none;
-  outline: none;
-  background: transparent;
+.cs_quantity_up{
+  position: absolute;
+  left: -20px;
+  font-size: 20px;
+}
+.cs_quantity_down{
+  position: absolute;
+  right: -4px;
+  font-size: 20px;
 }
 
-.cs_quantity_wrap.active {
-  .cs_quantity_dropdown {
+
+  .cs_quantity_dropdown.active {
     display: flex;
+    flex-direction: column;
   }
-}
-.cs_count{
-  padding-left: 20px;
+
+.cs_quantity{
+  position: relative;
+  display: flex;
+  input{
+    padding-right: 10px;
+  }
 }
 
 .cs_map {

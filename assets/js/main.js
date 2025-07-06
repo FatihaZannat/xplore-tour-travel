@@ -335,68 +335,90 @@
     12. Quantity
   --------------------------------------------------------------*/
     function quantityInit() {
-      // Close dropdown on outside click
-      $(document).on("click", function (event) {
-        if (!$(event.target).closest(".cs_quantity_wrap").length) {
-          $(".cs_quantity_wrap").removeClass("active");
-        }
-      });
-
-      // Toggle dropdown open/close
-      $(".cs_quantity_btn").on("click", function () {
-        $(".cs_quantity_wrap").removeClass("active");
-        $(this).closest(".cs_quantity_wrap").toggleClass("active");
-      });
-
-      // Set initial values
-      $(".cs_quantity_btn").each(function () {
-        var initialNumber = parseInt($(this).data("initial-number"), 10);
-        const label = formatGuestLabel(initialNumber);
-        $(this).text(label);
-        $(this)
-          .siblings(".cs_quantity_dropdown")
-          .find(".cs_quantity_number")
-          .text(pad(initialNumber));
-      });
-
-      // Increment
-      $(".cs_quantity_increment").on("click", function () {
-        const $wrap = $(this).closest(".cs_quantity_wrap");
-        const $number = $wrap.find(".cs_quantity_number");
-        const max = parseInt($number.data("max-value"), 10);
-        const current = parseInt($number.text(), 10);
-
-        if (current < max) {
-          const updated = current + 1;
-          $number.text(pad(updated));
-          $wrap.find(".cs_quantity_btn").text(formatGuestLabel(updated));
-        }
-      });
-
-      // Decrement
-      $(".cs_quantity_decrement").on("click", function () {
-        const $wrap = $(this).closest(".cs_quantity_wrap");
-        const $number = $wrap.find(".cs_quantity_number");
-        const min = parseInt($number.data("min-value"), 10);
-        const current = parseInt($number.text(), 10);
-
-        if (current > min) {
-          const updated = current - 1;
-          $number.text(pad(updated));
-          $wrap.find(".cs_quantity_btn").text(formatGuestLabel(updated));
-        }
-      });
-
-      // Pad number (e.g., 1 => 01)
-      function pad(num) {
-        return ("0" + num).slice(-2);
-      }
-
-      // Format label (e.g., 1 => "1 Adult", 2 => "2 Adults")
-      function formatGuestLabel(num) {
-        return num + " Adult" + (num > 1 ? "(s)" : "");
-      }
+    //Guest Summery Update Functionality
+    function updateSummary() {
+      let adults = $(".cs_adult input").val();
+      let children = $(".cs_children input").val();
+      const guestSummery = [
+        adults > 0 ? `${adults} Adults` : "",
+        children > 0 ? `${children} Children` : "",
+      ]
+        .filter(Boolean)
+        .join(", ");
+      $(".cs_quantity_btn").val(guestSummery);
     }
+    $(".cs_quantity_btn").on("click", function () {
+      $(this).siblings(".cs_quantity_dropdown").toggleClass("active");
+      updateSummary();
+    });
+    $(".cs_select_btn").on("click", function () {
+      $(this).siblings(".cs_quantity_dropdown").toggleClass("active");
+      updateRoom();
+    });
+    // Increment button
+    $(".cs_quantity_up").click(function () {
+      var $input = $(this).closest(".cs_quantity").find("input");
+      var max = parseInt($input.attr("max"));
+      var currentVal = parseInt($input.val());
+
+      if (currentVal < max) {
+        $input.val(currentVal + 1);
+      } else {
+        $input.val(max);
+      }
+      updateSummary();
+    });
+    // Decrement button
+    $(".cs_quantity_down").click(function () {
+      var $input = $(this).closest(".cs_quantity").find("input");
+      var min = parseInt($input.attr("min"));
+      var currentVal = parseInt($input.val());
+
+      if (currentVal > min) {
+        $input.val(currentVal - 1);
+      } else {
+        $input.val(min);
+      }
+      updateSummary();
+    });
+    // Room Summery Update Functionality
+    function updateRoom() {
+      $(".cs_options_wrapper input").on("click", function () {
+        var selectedValue = $(this).val();
+        $(this)
+          .closest(".cs_quantity_wrap")
+          .find(".cs_select_btn")
+          .val(selectedValue);
+        $(".cs_quantity_dropdown").removeClass("active");
+      });
+    }
+    // Language Update Functionality
+    $(".cs_language_switcher").on("click", function () {
+      $(this).siblings(".cs_language_dropdown").slideToggle();
+      updateLanguage();
+    });
+    function updateLanguage() {
+      $(".cs_language_dropdown input").on("click", function () {
+        var selectedValue = $(this).val();
+        $(this)
+          .closest(".cs_language_select")
+          .find(".cs_language_switcher input")
+          .val(selectedValue);
+        $(".cs_language_dropdown").slideUp();
+      });
+    }
+    // Close Input Box
+    function closeInputbox() {
+      $(document).on("click", function (e) {
+        if (!$(e.target).closest(".cs_quantity_wrap").length) {
+          $(".cs_quantity_dropdown").removeClass("active");
+        }
+      });
+    }
+    closeInputbox();
+    updateSummary();
+  }
+
 
   //     15. Light Gallery
   // --------------------------------------------------------------*
