@@ -57,7 +57,6 @@
       left: 0;
       bottom: 0;
       z-index: -1;
-      border-radius: 0px 0px 10px 10px;
       background: linear-gradient(0deg, #1d1d1d -23.78%, rgba(29, 29, 29, 0) 100%);
     }
     .cs_card_details{
@@ -70,10 +69,6 @@
   &.cs_type_1 {
     .cs_card_info {
       padding: 56px 24px 24px 24px;
-
-      &::before {
-        border-radius: 0px 0px 25px 25px;
-      }
     }
   }
 }

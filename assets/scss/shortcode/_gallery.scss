@@ -48,6 +48,11 @@
     height: 100%;
     padding: 24px;
 }
+.cs_culture_journey_wraper{
+    .draggable{
+        cursor: default !important;
+    }
+}
 
 .cs_search_icon {
     top: 50%;
@@ -59,27 +64,38 @@
 .cs_europe_journey_img {
     width: 100%;
     height: 329px;
-    transition: all 0.3s ease;
+    transition: all .03s ease;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     border-radius: 25px;
-
-    &:hover {
-        .cs_search_icon_overlay {
+    .cs_search_icon_overlay{
             position: absolute;
             left: 0;
             top: 0;
-            background: linear-gradient(0deg, #1d1d1d -23.78%, rgba(29, 29, 29, 0) 100%);
+            transition: all 0.3s ease;
             border-radius: 25px;
             width: 100%;
             height: 100%;
-
+            background: linear-gradient(0deg, #1d1d1d -23.78%, rgba(29, 29, 29, 0) 100%);
+            opacity: 0;
+             .cs_search_icon {
+                transition: all 0.3s ease;
+                opacity: 0;
+            }
+    }
+    &:hover {
+        .cs_search_icon_overlay {
+            opacity: 1;           
             .cs_search_icon {
-                z-index: 33333;
                 opacity: 1;
             }
         }
     }
 
 }
+.cs_video_block.cs_style_1.cs_type_1{
+    a{
+        cursor: pointer;
+    }
+} 
