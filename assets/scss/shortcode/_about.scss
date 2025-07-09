@@ -1,9 +1,11 @@
 .cs_about.cs_style_1 {
   .cs_about_section_img {
+    img {
     width: 100%;
     min-height: 630px;
     border-radius: 25px;
     object-fit: cover;
+  }
   }
   .cs_about_video_img {
     position: absolute;
@@ -35,7 +37,7 @@
       padding-left: 0;
     }
     @media (max-width: 991px) {
-     max-width: 473px;
+    //  max-width: 473px;
     }
   }
   .cs_about_left_in {
