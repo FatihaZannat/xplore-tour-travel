@@ -2,6 +2,10 @@
   border: 1px solid var(--primary);
   border-radius: 25px;
   padding: 32px;
+
+  @media (max-width: 450px) {
+    padding: 15px;
+  }
 }
   .cs_avatar.cs_style_1{
     margin-top: 24px;
@@ -31,7 +35,7 @@
 .cs_checkbox{
   margin-right: 20px;
 }
-.cs_testimonial{
+.cs_testimonials{
      .cs_section_heading.cs_style_1{
       align-items: flex-end;
       margin-bottom: 80px;
@@ -40,6 +44,14 @@
       align-items: flex-start;
       margin-bottom: 30px;
   }
+ }
+
+ .row{
+     .col-xl-3.col-lg-2{
+       @media (max-width: 991px) {
+         display: none;
+       }
+      }
  }
 }
 .slick-active{

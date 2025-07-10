@@ -14,6 +14,7 @@
     stickyHeader();
     modalVideo();
     hoverTab();
+    scrollSmoother()
     slickInit();
     accordian();
     isotopInit();
@@ -22,6 +23,7 @@
     quantityInit();
     lightGallery()
     datePicker();
+   
 
     $.exists = function (selector) {
       return $(selector).length > 0;
@@ -433,6 +435,20 @@
         mousewheel: true,
       });
     });
+  }
+  //     15. scroll smoother
+  // --------------------------------------------------------------*
+
+    function scrollSmoother() {
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+    ScrollSmoother.create({
+      wrapper: "#smooth-wrapper",
+      content: "#smooth-content",
+      smooth: 1.5,
+      effects: true
+    });
+
   }
 
 

@@ -6,8 +6,15 @@
   margin-right: -1px;
   width: 100%;
   border-radius: 25px 25px 0 0;
-  gap: 20px 25px;
+  gap: 10px 25px;
   position: relative;
+
+    @media (max-width: 576px) {
+      padding: 24px 20px;
+    }
+    @media (max-width: 450px) {
+      flex-direction: column;
+    }
 
   &::before {
     content: '';
@@ -62,13 +69,13 @@
 
     .cs_iconbox_title,
     .cs_iconbox_details {
-      color: #fff;
+      color: var(--white);
     }
 
     .cs_icon {
       background-color: rgba(255, 255, 255, 0.25);
       border-color: transparent;
-      color: #fff;
+      color: var(--white);
     }
   }
 }
