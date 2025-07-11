@@ -29,6 +29,10 @@ html {
   background-color: var(--white);
 }
 
+html {
+  font-size: 16px;
+}
+
 h1,
 h2,
 h3,
@@ -193,7 +197,7 @@ label {
   --secondary: rgb(20 20 20 / 75%);
   --gray: #f3f3f3;
   --primary-font: "DM Sans", sans-serif;
-  --secondary-font: "Playfair Display", serif;
+  --secondary-font: "Playfair Display", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -5145,9 +5149,6 @@ textarea {
   background-color: var(--primary);
   color: var(--white);
 }
-.cs_slider_arrows.cs_style_1 .cs_left_arrow {
-  margin-right: 16px;
-}
 
 .cs_pagination.cs_style_1 {
   display: flex;
@@ -5427,7 +5428,7 @@ textarea {
   position: relative;
   overflow: hidden;
 }
-.cs_card.cs_style_1 a {
+.cs_card.cs_style_1 .cs_card_img {
   display: block;
   width: 100%;
   height: 100%;
@@ -5447,8 +5448,9 @@ textarea {
   border-radius: 50px;
   position: absolute;
   background: linear-gradient(94deg, rgba(255, 255, 255, 0.4) 33.35%, rgba(255, 255, 255, 0.1) 91.75%);
+  backdrop-filter: blur(5px);
   top: 16px;
-  right: 36px;
+  right: 16px;
   color: white;
   transition: all 0.3s ease;
   border: none;
@@ -5468,20 +5470,25 @@ textarea {
   overflow: hidden;
   pointer-events: none;
 }
+.cs_card.cs_style_1 .cs_card_info > * {
+  position: relative;
+  z-index: 1;
+}
 .cs_card.cs_style_1 .cs_card_info:before {
   content: "";
-  position: absolute;
   height: 100%;
   width: 100%;
+  position: absolute;
   left: 0;
   bottom: 0;
-  z-index: -1;
   background: linear-gradient(0deg, #1d1d1d -23.78%, rgba(29, 29, 29, 0) 100%);
 }
 .cs_card.cs_style_1 .cs_card_info .cs_card_details {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 3px 15px;
+  flex-wrap: wrap;
 }
 .cs_card.cs_style_1.cs_type_1 .cs_card_info {
   padding: 56px 24px 24px 24px;
@@ -5555,7 +5562,7 @@ textarea {
   color: rgba(255, 255, 255, 0.75);
   width: 100%;
   height: 0%;
-  transition: all 0.6s ease;
+  transition: all 0.4s ease;
 }
 .cs_iconbox.cs_style_1 .cs_icon {
   height: 50px;
@@ -5565,8 +5572,9 @@ textarea {
   border: 1px solid var(--primary);
   color: var(--primary);
   z-index: 1;
+  transition: all 0.4s ease;
 }
-.cs_iconbox.cs_style_1 .cs_icon.icon_rotate i {
+.cs_iconbox.cs_style_1 .cs_icon .fa-rotate-by {
   transform: rotate(-45deg);
 }
 .cs_iconbox.cs_style_1:not(:last-child) {
@@ -5579,8 +5587,11 @@ textarea {
 .cs_iconbox.cs_style_1:not(:first-child) {
   margin-top: -20px;
 }
+.cs_iconbox.cs_style_1 .cs_iconbox_title,
+.cs_iconbox.cs_style_1 .cs_iconbox_details {
+  transition: all 0.4s ease;
+}
 .cs_iconbox.cs_style_1.active::before {
-  width: 100%;
   height: 100%;
   z-index: 0;
 }
@@ -5589,12 +5600,12 @@ textarea {
 }
 .cs_iconbox.cs_style_1.active .cs_iconbox_title,
 .cs_iconbox.cs_style_1.active .cs_iconbox_details {
-  color: #fff;
+  color: var(--white);
 }
 .cs_iconbox.cs_style_1.active .cs_icon {
   background-color: rgba(255, 255, 255, 0.25);
   border-color: transparent;
-  color: #fff;
+  color: var(--white);
 }
 
 .cs_testimonial.cs_style_1 {
@@ -5602,24 +5613,30 @@ textarea {
   border-radius: 25px;
   padding: 32px;
 }
+@media (max-width: 991px) {
+  .cs_testimonial.cs_style_1 {
+    padding: 24px 20px 30px;
+  }
+}
 
 .cs_avatar.cs_style_1 {
+  align-items: center;
+  gap: 15px 20px;
   margin-top: 24px;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
   transition-delay: 0.4s;
   transform: translateY(20px);
   opacity: 0;
 }
-.cs_avatar.cs_style_1 img {
+.cs_avatar.cs_style_1 .cs_avatar_icon {
   height: 48px;
   width: 48px;
-  border-radius: 50%;
-  object-fit: cover;
-  transition: all 1s ease;
-  position: relative;
 }
-.cs_avatar.cs_style_1 div {
-  padding-left: 20px;
+.cs_avatar.cs_style_1 .cs_avatar_icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
 }
 
 .cs_testimonial_blockquote_icon {
@@ -5628,24 +5645,9 @@ textarea {
   align-items: end;
 }
 
-.cs_checkbox {
-  margin-right: 20px;
-}
-
-.cs_testimonial .cs_section_heading.cs_style_1 {
-  align-items: flex-end;
-  margin-bottom: 80px;
-}
-@media (max-width: 991px) {
-  .cs_testimonial .cs_section_heading.cs_style_1 {
-    align-items: flex-start;
-    margin-bottom: 30px;
-  }
-}
-
 .slick-active .cs_avatar.cs_style_1 {
-  transform: translateY(0);
   opacity: 1;
+  transform: translateY(0);
 }
 
 .cs_contact_section.cs_style_1 {
@@ -5654,35 +5656,19 @@ textarea {
   background-position: top center;
 }
 
-.cs_contact_form_wrapper form {
-  margin: auto;
-}
-
-form {
+.cs_contact_form_wrapper {
   max-width: 925px;
-  margin: auto;
+  margin: 0 auto;
   padding: 56px 50px;
   border-radius: 25px;
   background: linear-gradient(92deg, rgba(255, 255, 255, 0.6) 16.51%, rgba(255, 255, 255, 0.2) 94.64%);
-  /* Glassmorphism 2 */
   backdrop-filter: blur(5px);
   font-size: 16px;
 }
-form input::-webkit-outer-spin-button,
-form input::-webkit-inner-spin-button {
+.cs_contact_form_wrapper input::-webkit-outer-spin-button,
+.cs_contact_form_wrapper input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-.cs_form_field_in {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: space-between;
-  align-items: center;
-}
-.cs_form_field_in .cs_section_heading.cs_style_1 {
-  align-items: center;
 }
 
 .cs_form_field {
@@ -5694,6 +5680,10 @@ form input::-webkit-inner-spin-button {
   padding-bottom: 16px;
   background-color: transparent;
   font-size: 16px;
+  color: var(--secondary);
+}
+.cs_form_field::placeholder {
+  color: var(--secondary);
 }
 
 .cs_brand_section {
@@ -5850,17 +5840,27 @@ cs_calculate_area,
   margin-bottom: 8px;
 }
 
-.cs_footer_widget.cs_contacts .cs_footer_widget_title h4 {
+.cs_footer_widget.cs_contacts .cs_footer_widget_title {
   margin-bottom: 41px;
-  font-size: 20px;
 }
 .cs_footer_widget.cs_contacts .cs_footer_widget_menu li {
   margin-bottom: 21px;
+  padding-left: 28px;
+  position: relative;
+}
+.cs_footer_widget.cs_contacts .cs_footer_widget_menu li:last-child {
+  margin-bottom: 0;
+}
+.cs_footer_widget.cs_contacts .cs_footer_widget_menu i {
+  position: absolute;
+  left: 0;
+  top: 7px;
 }
 
 .cs_copyright {
   border-top: 1px solid #4F4F4F;
   padding-top: 12px;
+  margin-top: 21px;
   display: block;
   text-align: right;
 }

@@ -19,7 +19,7 @@
     color: rgba(255, 255, 255, .75);
     width: 100%;
     height: 0%;
-    transition: all .6s ease;
+    transition: all .4s ease;
   }
 
   .cs_icon {
@@ -30,8 +30,9 @@
     border: 1px solid var(--primary);
     color: var(--primary);
     z-index: 1;
+    transition: all .4s ease;
 
-    &.icon_rotate i {
+    .fa-rotate-by {
       transform: rotate(-45deg);
     }
   }
@@ -49,9 +50,13 @@
     margin-top: -20px;
   }
 
+  .cs_iconbox_title,
+  .cs_iconbox_details {
+    transition: all .4s ease;
+  }
+
   &.active {
     &::before {
-      width: 100%;
       height: 100%;
       z-index: 0;
     }
@@ -62,13 +67,13 @@
 
     .cs_iconbox_title,
     .cs_iconbox_details {
-      color: #fff;
+      color: var(--white);
     }
 
     .cs_icon {
       background-color: rgba(255, 255, 255, 0.25);
       border-color: transparent;
-      color: #fff;
+      color: var(--white);
     }
   }
 }
