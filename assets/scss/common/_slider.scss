@@ -4,16 +4,20 @@
 .cs_slider {
   position: relative;
 }
+
 .slick-arrow {
   cursor: pointer;
 }
+
 .draggable {
   cursor: url(../img/drag.png) 16 9, ew-resize !important;
 }
-.slick-slide > div {
+
+.slick-slide>div {
   display: flex;
   flex-direction: column;
 }
+
 .cs_remove_overflow {
   .slick-list {
     overflow: visible;
@@ -30,21 +34,25 @@
     }
   }
 }
+
 .cs_slider_gap_24 {
   .slick-slide {
     padding-left: 12px;
     padding-right: 12px;
   }
+
   .slick-list {
     margin-left: -12px;
     margin-right: -12px;
   }
 }
+
 .cs_slider_gap_66 {
   .slick-slide {
     padding-left: 33px;
     padding-right: 33px;
   }
+
   .slick-list {
     margin-left: -33px;
     margin-right: -33px;
@@ -52,6 +60,7 @@
 }
 
 .cs_slider_arrows.cs_style_1 {
+
   .cs_left_arrow,
   .cs_right_arrow {
     width: 48px;
@@ -60,13 +69,11 @@
     border-radius: 50%;
     color: var(--primary);
     transition: all 0.3s ease;
+
     &:hover {
       background-color: var(--primary);
       color: var(--white);
     }
-  }
-  .cs_left_arrow {
-    margin-right: 16px;
   }
 }
 
@@ -86,6 +93,7 @@
     display: flex;
     flex: 1;
     height: 4px;
+
     button {
       height: 100%;
       width: 100%;
@@ -97,6 +105,7 @@
       outline: none;
       cursor: pointer;
       transition: all 0.3s ease;
+
       &:hover {
         background-color: rgb(249 251 243 / 75%);
       }
@@ -119,6 +128,7 @@
 .cs_show_lg {
   display: none !important;
 }
+
 @media (max-width: 991px) {
   .cs_hide_lg {
     display: none !important;
@@ -130,7 +140,8 @@
     display: flex !important;
   }
 }
-.slick-track{
+
+.slick-track {
   display: flex;
   align-items: center;
   justify-content: center;
