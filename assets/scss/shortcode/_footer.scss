@@ -22,12 +22,11 @@
 
 .cs_footer_widget {
     .cs_footer_widget_title {
-        h3 {
             color: var(--white);
             margin-bottom: 12px;
             font-weight: 700;
             font-size: 16px;
-        }
+        
     }
 
     .cs_footer_widget_menu {
@@ -44,6 +43,7 @@
 .cs_footer_widget.cs_contacts {
     .cs_footer_widget_title {
         margin-bottom: 41px;
+        font-size: 20px;
     }
 
     .cs_footer_widget_menu {

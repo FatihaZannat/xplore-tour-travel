@@ -63,9 +63,9 @@
                         <h1 class="cs_section_title cs_fs_64 cs_secondary_color mb-0">SEND US A <i>MESSAGE</i></h1>
                     </div>
                     <div class="cs_height_60 cs_height_lg_30"></div>
-                    <form action="https://api.web3forms.com/submit" method="post" class="row">
+                    <form action="https://api.web3forms.com/submit" method="post" class="row" id="cs_form">
 						<div class="col-sm-6">
-							<input type="text" name="text" class="cs_form_field" placeholder="Name" required>
+							<input type="text" name="name" class="cs_form_field" placeholder="Name" autocomplete="given-name" required>
 						</div>
 						<div class="col-sm-6">
 							<input type="number" name="number" class="cs_form_field" placeholder="Phone Number">
@@ -77,10 +77,7 @@
 							<button class="cs_btn cs_style_1 cs_type_3 cs_bold" type="submit">
 								<span>Send Message</span>
 								<svg xmlns="http://www.w3.org/2000/svg" width="25" height="8" viewBox="0 0 25 8"
-									fill="currentColor">
-									<path
-										d="M24.8536 4.35355C25.0488 4.15829 25.0488 3.84171 24.8536 3.64645L21.6716 0.464466C21.4763 0.269204 21.1597 0.269204 20.9645 0.464466C20.7692 0.659728 20.7692 0.976311 20.9645 1.17157L23.7929 4L20.9645 6.82843C20.7692 7.02369 20.7692 7.34027 20.9645 7.53553C21.1597 7.7308 21.4763 7.7308 21.6716 7.53553L24.8536 4.35355ZM0.5 4.5H24.5V3.5H0.5V4.5Z"
-										fill="currentColor" />
+									fill="currentColor"><path d="M24.8536 4.35355C25.0488 4.15829 25.0488 3.84171 24.8536 3.64645L21.6716 0.464466C21.4763 0.269204 21.1597 0.269204 20.9645 0.464466C20.7692 0.659728 20.7692 0.976311 20.9645 1.17157L23.7929 4L20.9645 6.82843C20.7692 7.02369 20.7692 7.34027 20.9645 7.53553C21.1597 7.7308 21.4763 7.7308 21.6716 7.53553L24.8536 4.35355ZM0.5 4.5H24.5V3.5H0.5V4.5Z"fill="currentColor" />
 								</svg>
 							</button>
 						</div>
@@ -91,38 +88,33 @@
         <div class="cs_height_100 cs_height_lg_60"></div>
     </section>
     <!-- start footer section -->
- <footer class="cs_footer cs_style_1">
+	<footer class="cs_footer cs_style_1">
 		<div class="container">
 			<div class="cs_footer_row">
 				<div class="cs_footer_col">
 					<div class="cs_footer_widget">
-						<div class="cs_footer_widget_title">
-							<h3>Discover</h3>
+							<h3 class="cs_footer_widget_title">Discover</h3>
 							<ul class="cs_footer_widget_menu cs_mp_0">
 								<li><a href="index.html">Home</a></li>
 								<li><a href="about.html">About Us</a></li>
 								<li><a href="trips.html">Trip Packages</a></li>
 								<li><a href="trip-details.html">Travel blog</a></li>
 							</ul>
-						</div>
 					</div>
 				</div>
 				<div class="cs_footer_col">
 					<div class="cs_footer_widget">
-						<div class="cs_footer_widget_title">
-							<h3>Services</h3>
+					<h3 class="cs_footer_widget_title">Services</h3>
 							<ul class="cs_footer_widget_menu cs_mp_0">
 								<li><a href="#">Trip Itinerary</a></li>
 								<li><a href="#">Trip Preparations</a></li>
 								<li><a href="#">Booking Form</a></li>
 							</ul>
-						</div>
 					</div>
 				</div>
 				<div class="cs_footer_col">
 					<div class="cs_footer_widget">
-						<div class="cs_footer_widget_title">
-							<h3>Packages</h3>
+							<h3 class="cs_footer_widget_title">Packages</h3>
 							<ul class="cs_footer_widget_menu cs_mp_0">
 								<li><a href="#">Popular Trip</a></li>
 								<li><a href="#">Personal Tour</a></li>
@@ -130,13 +122,11 @@
 								<li><a href="#">Business Tour</a></li>
 								<li><a href="#">Testimonials</a></li>
 							</ul>
-						</div>
 					</div>
 				</div>
 				<div class="cs_footer_col">
 					<div class="cs_footer_widget">
-						<div class="cs_footer_widget_title">
-							<h3>Support</h3>
+							<h3 class="cs_footer_widget_title">Support</h3>
 							<ul class="cs_footer_widget_menu cs_mp_0">
 								<li><a href="#">FAQ</a></li>
 								<li><a href="#">Customer Services</a></li>
@@ -145,27 +135,23 @@
 								<li><a href="#">Refund Policy</a></li>
 								<li><a href="#">Travel Policy</a></li>
 							</ul>
-						</div>
 					</div>
 				</div>
 				<div class="cs_footer_col">
 					<div class="cs_footer_widget cs_contacts">
-						<div class="cs_footer_widget_title">
-							<h3>Contacts</h3>
-							<ul class="cs_footer_widget_menu cs_mp_0">
-								<li><a href="tel:+123 456 7890" class="cs_white_color">
-										<i class="cs_pr_16 cs_white_color fa-solid fa-phone"></i>+123 456 7890</a>
+							<h3 class="cs_footer_widget_title">Contacts</h3>
+							<ul class="cs_footer_widget_menu cs_white_color cs_mp_0">
+								<li>
+									<a href="tel:+1234567890">
+										<i class="fa-solid fa-phone"></i>+123 456 7890</a>
 								</li>
 								<li class="d-flex">
-									<i class="cs_pr_16 cs_mt_7 cs_white_color d-block fa-solid fa-location-dot"></i>
-									<span class="cs_white_color">123 Wanderer Street, City Name, State Name,
+									<i class="fa-solid fa-location-dot"></i>
+									<span>123 Wanderer Street, City Name, State Name,
 										Nation</span>
 								</li>
 							</ul>
-							<div class="cs_copyright cs_fs_16">
-								Copyright @ 2025
-							</div>
-						</div>
+							<div class="cs_copyright cs_fs_16">Copyright &copy; 2025</div>
 					</div>
 				</div>
 			</div>

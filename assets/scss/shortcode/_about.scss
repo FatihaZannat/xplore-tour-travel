@@ -14,19 +14,9 @@
     border-radius: 25px;
     box-shadow: 0 0 0 20px white;
   }
-  .cs_about_left {
-    padding-right: 90px;
-     @media (max-width: 1199px) {
-      padding-right: 40px;
-    }
-     @media (max-width: 991px) {
-      padding-right: 0;
-    }
-  }
   .cs_about_right {
-    padding-left: 40px;
     .cs_section_heading.cs_style_1{
-      h2{
+      .cs_section_title{
         margin-bottom: 24px;
       }
       p{
@@ -35,12 +25,6 @@
           margin-bottom: 24px;
         }
       }
-    }
-    @media (max-width: 1399px) {
-      padding-left: 0;
-    }
-    @media (max-width: 991px) {
-    //  max-width: 473px;
     }
   }
   .cs_about_left_in {
