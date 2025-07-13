@@ -25,7 +25,7 @@
   .cs_icon {
     height: 50px;
     width: 50px;
-    border-radius: 50px;
+    border-radius: 50%;
     position: absolute;
     background: linear-gradient(94deg, rgba(255, 255, 255, 0.4) 33.35%, rgba(255, 255, 255, 0.1) 91.75%);
     backdrop-filter: blur(5px);
@@ -47,10 +47,8 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    z-index: 1;
     padding: 16px;
     width: 100%;
-    overflow: hidden;
     pointer-events: none;
 
     >* {
@@ -75,9 +73,11 @@
       gap: 3px 15px;
       flex-wrap: wrap;
 
-      svg{
+     .cs_card_subtitle {
+       svg {
         margin-right: 8px;
       }
+     }
     }
   }
 
@@ -85,11 +85,5 @@
     .cs_card_info {
       padding: 56px 24px 24px 24px;
     }
-  }
-}
-
-.cs_card_subtitle {
-  i {
-    padding-right: 8px;
   }
 }

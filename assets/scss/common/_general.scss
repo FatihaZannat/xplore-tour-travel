@@ -427,9 +427,6 @@
 }
 
 .cs_pagination_box {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -449,40 +446,24 @@
   }
 }
 
-.cs_pagination_arrow {
-  transition: all 0.3s ease;
-  color: var(--secondary);
-  opacity: 0.25;
-
-  &:hover {
-    color: var(--primary);
-    opacity: 1;
-  }
-}
 
 .cs_list.cs_style_1 {
   li {
     &:not(:last-child) {
       margin-bottom: 8px;
     }
-
-    span {
-      &:first-child {
-        margin-right: 16px;
-      }
-    }
   }
 }
 
-.cs_icon.cs_style_1 {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+// .cs_icon.cs_style_1 {
+//   display: flex;
+//   align-items: center;
+//   gap: 12px;
 
-  i {
-    display: flex;
-  }
-}
+//   i {
+//     display: flex;
+//   }
+// }
 
 // accordian
 .cs_accordian {
@@ -539,7 +520,7 @@
 
     ul {
       list-style: disc;
-      transition: all 0.3s ease;
+      transition: all 03s ease;
     }
   }
 
@@ -571,9 +552,8 @@
   }
 }
 
-
-
 .cs_tab_links {
+  gap: 0 40px;
   li {
     color: #14141440;
 
@@ -582,10 +562,6 @@
       border-bottom: 4px solid var(--primary);
       padding-bottom: 12px;
     }
-  }
-
-  :not(:first-child) {
-    margin-left: 40px;
   }
 }
 

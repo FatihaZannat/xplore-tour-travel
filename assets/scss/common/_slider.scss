@@ -35,6 +35,28 @@
   }
 }
 
+.cs_slider_gap_32 {
+  .slick-slide {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .slick-list {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+}
+.cs_slider_gap_20 {
+  .slick-slide {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .slick-list {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
 .cs_slider_gap_24 {
   .slick-slide {
     padding-left: 12px;
