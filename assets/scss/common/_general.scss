@@ -9,53 +9,68 @@
     margin-bottom: $i + px;
   }
 }
-.cs_mb_24{
+
+.cs_mb_24 {
   margin-bottom: 24px;
 }
-.cs_mb_28{
+
+.cs_mb_28 {
   margin-bottom: 28px;
 }
-.cs_mb_40{
+
+.cs_mb_40 {
   margin-bottom: 40px;
 }
-.cs_mb_48{
+
+.cs_mb_48 {
   margin-bottom: 48px;
 }
-.cs_mb_64{
+
+.cs_mb_64 {
   margin-bottom: 64px;
 }
-.cs_mb_80{
+
+.cs_mb_80 {
   margin-bottom: 80px;
 }
-.cs_mt_7{
+
+.cs_mt_7 {
   margin-top: 7px;
 }
-.cs_mt_18{
+
+.cs_mt_18 {
   margin-top: 18px;
 }
-.cs_mt_25{
+
+.cs_mt_25 {
   margin-top: 25px;
 }
-.cs_mb_32{
+
+.cs_mb_32 {
   margin-bottom: 32px;
 }
-.cs_mt_28{
+
+.cs_mt_28 {
   margin-top: 28px;
 }
 
-.cs_mt_56{
+.cs_mt_56 {
   margin-top: 56px;
 }
-.cs_mt_68{
+
+.cs_mt_68 {
   margin-top: 68px;
 }
-.cs_pr_90{
+
+.cs_pr_90 {
   padding-right: 90px;
 }
-.cs_pr_16{
+
+.cs_pr_16 {
   padding-right: 16px;
 }
-.cs_pb_50{
+
+.cs_pb_50 {
   padding-bottom: 50px;
 }
 
@@ -124,11 +139,12 @@
   font-size: 64px;
   line-height: 1.125em;
   letter-spacing: -1.28px;
-  
-   @media (max-width: 1199px) {
+
+  @media (max-width: 1199px) {
     font-size: 50px;
   }
-   @media (max-width: 767px) {
+
+  @media (max-width: 767px) {
     font-size: 40px;
   }
 }
@@ -145,6 +161,7 @@
   @media (max-width: 767px) {
     font-size: 55px;
   }
+
   @media (max-width: 575px) {
     font-size: 42px;
   }
@@ -189,9 +206,11 @@
 .cs_gap_y_30 {
   gap: 30px 0;
 }
+
 .cs_gap_y_40 {
   gap: 40px 0;
 }
+
 .cs_gap_y_50 {
   gap: 50px 0;
 }
@@ -364,9 +383,11 @@
   @media (max-width: 1199px) {
     align-items: start;
   }
+
   .cs_section_heading_right {
     max-width: 450px;
-    @media (max-width: 991px){
+
+    @media (max-width: 991px) {
       max-width: 100%;
     }
   }
@@ -374,9 +395,10 @@
   @media (max-width: 991px) {
     flex-direction: column;
     align-items: start;
+
     .cs_section_title,
-    .cs_section_title{
-      br{
+    .cs_section_title {
+      br {
         display: none;
       }
     }
@@ -387,7 +409,8 @@
     justify-content: space-between;
     align-items: start;
     max-width: 540px;
-    @media (max-width: 991px){
+
+    @media (max-width: 991px) {
       max-width: 100%;
     }
   }
@@ -472,16 +495,19 @@
     flex-wrap: wrap;
     padding: 24px 40px;
 
-    @media(max-width:1399px){
+    @media(max-width:1399px) {
       padding: 24px 15px;
       gap: 20px 35px;
     }
-     @media (max-width: 991px) {
-          padding: 24px 40px;
+
+    @media (max-width: 991px) {
+      padding: 24px 40px;
     }
-     @media (max-width: 453px) {
-          padding-left: 40px;
+
+    @media (max-width: 453px) {
+      padding-left: 40px;
     }
+
     p {
       color: var(--primary);
     }
@@ -495,17 +521,20 @@
     margin-top: -12px;
 
     @media (max-width:1399px) {
-          padding-left: 114px;
-          padding-right: 225px;
+      padding-left: 114px;
+      padding-right: 225px;
     }
+
     @media (max-width:1199px) {
-          padding-right: 40px;
+      padding-right: 40px;
     }
+
     @media (max-width: 991px) {
-          padding-left: 138px;
+      padding-left: 138px;
     }
+
     @media (max-width: 453px) {
-          padding-left: 40px;
+      padding-left: 40px;
     }
 
     ul {
@@ -532,12 +561,12 @@
     .cs_arrordian_img {
       transform: translateY(-50%) scale(1);
 
-       @media (max-width:1199px) {
-       position: relative;
-       transform: translateY(0%) scale(1);
-       padding-left: 50px;
-       padding-top: 20px;
-    }
+      @media (max-width:1199px) {
+        position: relative;
+        transform: translateY(0%) scale(1);
+        padding-left: 50px;
+        padding-top: 20px;
+      }
     }
   }
 }
@@ -592,30 +621,32 @@ textarea {
   justify-content: space-between;
 }
 
-.cs_quantity_up{
+.cs_quantity_up {
   position: absolute;
   left: -25px;
   font-size: 20px;
 }
-.cs_quantity_down{
+
+.cs_quantity_down {
   font-size: 20px;
 }
-.cs_quantity_button{
+
+.cs_quantity_button {
   height: 20px;
-    width: 20px;
-    border: 1px solid var(--primary);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 20px;
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-  .cs_quantity_dropdown.active {
-    display: flex;
-    flex-direction: column;
-  }
+.cs_quantity_dropdown.active {
+  display: flex;
+  flex-direction: column;
+}
 
-.cs_quantity{
+.cs_quantity {
   position: relative;
   display: flex;
   align-items: center;
@@ -630,5 +661,19 @@ textarea {
   iframe {
     height: 100%;
     width: 100%;
+  }
+}
+
+/*=======================================================
+ GSAP Smooth Scroll CSS Style
+=========================================================*/
+#smooth-wrapper {
+  height: 100%;
+  overflow: hidden;
+}
+
+#smooth-content {
+  .cs_slider_container {
+    transform: none !important;
   }
 }

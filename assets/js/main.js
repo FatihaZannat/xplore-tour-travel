@@ -14,16 +14,15 @@
     stickyHeader();
     modalVideo();
     hoverTab();
-    scrollSmoother()
+    scrollSmoother();
     slickInit();
     accordian();
     isotopInit();
     heartToggle();
     tabs();
     quantityInit();
-    lightGallery()
+    lightGallery();
     datePicker();
-   
 
     $.exists = function (selector) {
       return $(selector).length > 0;
@@ -337,120 +336,115 @@
     12. Quantity
   --------------------------------------------------------------*/
     function quantityInit() {
-    //Guest Summery Update Functionality
-    function updateSummary() {
-      let adults = $(".cs_adult input").val();
-      let children = $(".cs_children input").val();
-      const guestSummery = [
-        adults > 0 ? `${adults} Adults` : "",
-        children > 0 ? `${children} Children` : "",
-      ]
-        .filter(Boolean)
-        .join(", ");
-      $(".cs_quantity_btn").val(guestSummery);
-    }
-    $(".cs_quantity_btn").on("click", function () {
-      $(this).siblings(".cs_quantity_dropdown").toggleClass("active");
-      updateSummary();
-    });
-    $(".cs_select_btn").on("click", function () {
-      $(this).siblings(".cs_quantity_dropdown").toggleClass("active");
-      updateRoom();
-    });
-    // Increment button
-    $(".cs_quantity_up").click(function () {
-      var $input = $(this).closest(".cs_quantity").find("input");
-      var max = parseInt($input.attr("max"));
-      var currentVal = parseInt($input.val());
-
-      if (currentVal < max) {
-        $input.val(currentVal + 1);
-      } else {
-        $input.val(max);
+      //Guest Summery Update Functionality
+      function updateSummary() {
+        let adults = $(".cs_adult input").val();
+        let children = $(".cs_children input").val();
+        const guestSummery = [
+          adults > 0 ? `${adults} Adults` : "",
+          children > 0 ? `${children} Children` : "",
+        ]
+          .filter(Boolean)
+          .join(", ");
+        $(".cs_quantity_btn").val(guestSummery);
       }
-      updateSummary();
-    });
-    // Decrement button
-    $(".cs_quantity_down").click(function () {
-      var $input = $(this).closest(".cs_quantity").find("input");
-      var min = parseInt($input.attr("min"));
-      var currentVal = parseInt($input.val());
+      $(".cs_quantity_btn").on("click", function () {
+        $(this).siblings(".cs_quantity_dropdown").toggleClass("active");
+        updateSummary();
+      });
+      $(".cs_select_btn").on("click", function () {
+        $(this).siblings(".cs_quantity_dropdown").toggleClass("active");
+        updateRoom();
+      });
+      // Increment button
+      $(".cs_quantity_up").click(function () {
+        var $input = $(this).closest(".cs_quantity").find("input");
+        var max = parseInt($input.attr("max"));
+        var currentVal = parseInt($input.val());
 
-      if (currentVal > min) {
-        $input.val(currentVal - 1);
-      } else {
-        $input.val(min);
-      }
-      updateSummary();
-    });
-    // Room Summery Update Functionality
-    function updateRoom() {
-      $(".cs_options_wrapper input").on("click", function () {
-        var selectedValue = $(this).val();
-        $(this)
-          .closest(".cs_quantity_wrap")
-          .find(".cs_select_btn")
-          .val(selectedValue);
-        $(".cs_quantity_dropdown").removeClass("active");
-      });
-    }
-    // Language Update Functionality
-    $(".cs_language_switcher").on("click", function () {
-      $(this).siblings(".cs_language_dropdown").slideToggle();
-      updateLanguage();
-    });
-    function updateLanguage() {
-      $(".cs_language_dropdown input").on("click", function () {
-        var selectedValue = $(this).val();
-        $(this)
-          .closest(".cs_language_select")
-          .find(".cs_language_switcher input")
-          .val(selectedValue);
-        $(".cs_language_dropdown").slideUp();
-      });
-    }
-    // Close Input Box
-    function closeInputbox() {
-      $(document).on("click", function (e) {
-        if (!$(e.target).closest(".cs_quantity_wrap").length) {
-          $(".cs_quantity_dropdown").removeClass("active");
+        if (currentVal < max) {
+          $input.val(currentVal + 1);
+        } else {
+          $input.val(max);
         }
+        updateSummary();
+      });
+      // Decrement button
+      $(".cs_quantity_down").click(function () {
+        var $input = $(this).closest(".cs_quantity").find("input");
+        var min = parseInt($input.attr("min"));
+        var currentVal = parseInt($input.val());
+
+        if (currentVal > min) {
+          $input.val(currentVal - 1);
+        } else {
+          $input.val(min);
+        }
+        updateSummary();
+      });
+      // Room Summery Update Functionality
+      function updateRoom() {
+        $(".cs_options_wrapper input").on("click", function () {
+          var selectedValue = $(this).val();
+          $(this)
+            .closest(".cs_quantity_wrap")
+            .find(".cs_select_btn")
+            .val(selectedValue);
+          $(".cs_quantity_dropdown").removeClass("active");
+        });
+      }
+      // Language Update Functionality
+      $(".cs_language_switcher").on("click", function () {
+        $(this).siblings(".cs_language_dropdown").slideToggle();
+        updateLanguage();
+      });
+      function updateLanguage() {
+        $(".cs_language_dropdown input").on("click", function () {
+          var selectedValue = $(this).val();
+          $(this)
+            .closest(".cs_language_select")
+            .find(".cs_language_switcher input")
+            .val(selectedValue);
+          $(".cs_language_dropdown").slideUp();
+        });
+      }
+      // Close Input Box
+      function closeInputbox() {
+        $(document).on("click", function (e) {
+          if (!$(e.target).closest(".cs_quantity_wrap").length) {
+            $(".cs_quantity_dropdown").removeClass("active");
+          }
+        });
+      }
+      closeInputbox();
+      updateSummary();
+    }
+
+    //     15. Light Gallery
+    // --------------------------------------------------------------*
+
+    function lightGallery() {
+      $(".cs_lightgallery").each(function () {
+        $(this).lightGallery({
+          selector: ".cs_lightbox_item",
+          subHtmlSelectorRelative: false,
+          thumbnail: true,
+          mousewheel: true,
+        });
       });
     }
-    closeInputbox();
-    updateSummary();
-  }
-
-
-  //     15. Light Gallery
-  // --------------------------------------------------------------*
-
-  function lightGallery() {
-  
-    $(".cs_lightgallery").each(function () {
-      $(this).lightGallery({
-        selector: ".cs_lightbox_item",
-        subHtmlSelectorRelative: false,
-        thumbnail: true,
-        mousewheel: true,
-      });
-    });
-  }
-  //     15. scroll smoother
-  // --------------------------------------------------------------*
+    //     15. scroll smoother
+    // --------------------------------------------------------------*
 
     function scrollSmoother() {
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+      gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-    ScrollSmoother.create({
-      wrapper: "#smooth-wrapper",
-      content: "#smooth-content",
-      smooth: 1.5,
-      effects: true
-    });
-
-  }
-
-
+      ScrollSmoother.create({
+        wrapper: "#smooth-wrapper",
+        content: "#smooth-content",
+        smooth: 2,
+        effects: true,
+      });
+    }
   });
 })(jQuery); // end of use strict
