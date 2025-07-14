@@ -40,7 +40,7 @@
     function mainNav() {
       $(".cs_nav").append('<span class="cs_menu_toggle"><span></span></span>');
       $(".menu-item-has-children").append(
-        '<span class="cs_munu_dropdown_toggle"><span></span></span>'
+        '<span class="cs_menu_dropdown_toggle"><span></span></span>'
       );
       $(".cs_menu_toggle").on("click", function () {
         $(this)
@@ -49,7 +49,7 @@
           .toggleClass("cs_active");
           stickyHeader();
       });
-      $(".cs_munu_dropdown_toggle").on("click", function () {
+      $(".cs_menu_dropdown_toggle").on("click", function () {
         $(this).toggleClass("active").siblings("ul").slideToggle();
         $(this).parent().toggleClass("active");
         
